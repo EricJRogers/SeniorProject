@@ -1,13 +1,12 @@
 body {
   width: auto;
   margin: 0;
-  background-color: #FFFFFF;
+  background-color: #CCCCCC;
 }
 
 .jumbotron {
   background-color: #12396F;
   color: #F1BC00;
-  max-height: 50%;
 }
 
 #mcla-logo {
@@ -23,8 +22,23 @@ body {
   text-align: center;
   font-weight: bold;
   font-size: 20px;
+  color: #F1BC00;
 }
 
 .col-xs-12 {
   margin-top: 10px;
+}
+
+.btn.btn-primary.btn-block {
+  overflow: hidden;
+}
+
+.btn-title {
+  color: #F1BC00;
+  font-weight: bold;
+}
+
+.btn-subTitle {
+  text-align: left;
+  margin-bottom: 0px;
 }
