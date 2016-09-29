@@ -1,0 +1,30 @@
+body {
+  width: auto;
+  margin: 0;
+  background-color: #FFFFFF;
+}
+
+.jumbotron {
+  background-color: #12396F;
+  color: #F1BC00;
+  max-height: 50%;
+}
+
+#mcla-logo {
+  max-height: 200px;
+  max-width: 250px;
+}
+
+.panel-heading {
+  background-color: #12396F!important;
+}
+
+.panel-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.col-xs-12 {
+  margin-top: 10px;
+}
