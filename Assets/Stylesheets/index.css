@@ -7,6 +7,8 @@ body {
 .jumbotron {
   background-color: #12396F;
   color: #F1BC00;
+  padding: 15px;
+  margin-bottom: 20px;
 }
 
 #mcla-logo {
