@@ -4,20 +4,32 @@ body {
   background-color: #CCCCCC;
 }
 
-#menu-panel {
-
+.page-header {
+  margin: 0px;
+  padding: 15px;
+  border-bottom-color: #F1BC00;
+  border-bottom-width: medium;
+  background-color: #12396F
 }
 
 .jumbotron {
-  background-color: #12396F;
+  overflow: hidden;
+  border-bottom-color: #F1BC00;
+  border-bottom-width: medium;
+  border-bottom-style: solid;
+  background-color: white;
   color: #F1BC00;
   padding: 15px 30px 15px 30px !important;
+  margin-top: 0px;
   margin-bottom: 20px;
 }
 
-#mcla-logo {
-  max-height: 200px;
-  max-width: 250px;
+#title-img {
+  float: right;
+}
+
+#menu-panel {
+
 }
 
 .panel-heading {
@@ -25,10 +37,14 @@ body {
 }
 
 .panel-title {
-  text-align: center;
+  overflow: hidden;
   font-weight: bold;
   font-size: 20px;
   color: #F1BC00;
+}
+
+#menu-title {
+  text-align: center;
 }
 
 .col-xs-12 {
@@ -47,4 +63,11 @@ body {
 .btn-subTitle {
   text-align: left;
   margin-bottom: 0px;
+}
+
+.modal-content {
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  width: 65%;
+  height: 75%;
 }
