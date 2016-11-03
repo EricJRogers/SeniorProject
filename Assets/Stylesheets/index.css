@@ -73,9 +73,17 @@ body {
   height: 75%;
 }
 
-input {
-  type: text;
+.body-left {
+}
+
+.body-right {
+  text-align: center;
+}
+
+textarea {
   background-color: black;
+  color: white;
   height: 400px;
   width: 500px;
+  resize: none;
 }
