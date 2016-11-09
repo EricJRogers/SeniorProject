@@ -73,17 +73,41 @@ body {
   height: 75%;
 }
 
+.modal-body {
+  height: 80%;
+}
+
 .body-left {
+  height: 100%;
 }
 
 .body-right {
   text-align: center;
+  height: 100%;
 }
 
-textarea {
+.body-right .btn {
+  width: 80%;
+  margin: 0px 0px 10px 0px;
+}
+
+.terminal-title {
+  border-top-right-radius: .3em;
+  border-top-left-radius: .3em;
+  height: 5%;
+  width: 100%;
+
+}
+
+.terminal-window {
   background-color: black;
   color: white;
-  height: 400px;
-  width: 500px;
+  height: 95%;
+  width: 100%;
   resize: none;
+  border: none;
+}
+
+.terminal-text {
+  padding: 0px 0px 0px 5px;
 }
