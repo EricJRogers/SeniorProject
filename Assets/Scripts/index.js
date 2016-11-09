@@ -8,7 +8,17 @@ function loadModal() {
 
 function gitWin() {
   console.log("gitWin");
-  $('.terminal-window').append("git install\nuser@terminal:~$ ");
+  typeText('.terminal-window', 'git install', 0, 200);
+//  $('.terminal-window').append("git install\nuser@terminal:~$ ");
+}
+
+function typeText(target, string, index, interval) {
+  if (index < string.length) {
+    $(target).append(string[index++]);
+    setTimeout(function () { typeText(target, string, index, interval); }, interval);
+  }
+  else
+    $(target).append('\nuser@terminal:~$ ');
 }
 
 function init() {
