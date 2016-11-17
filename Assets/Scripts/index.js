@@ -1,17 +1,16 @@
+//Function will find and load modal based on the id of the button clicked
 function loadModal() {
-  //Build Modal_ID from clicked Button_ID
-  var modal_id = '#modal-'.concat((this.id).substring(7,8));
-
-  //Load proper Modal based on clicked button
+  var button_id = this.id;
+  var modal_id = '#modal-'.concat(button_id.substring(7));
   $(modal_id).modal();
 };
 
-function gitWin() {
-  console.log("gitWin");
-  typeText('.terminal-window', 'git install', 0, 200);
-//  $('.terminal-window').append("git install\nuser@terminal:~$ ");
+//Function displays proper instructions to modal terminal display
+function gitInstall() {
+  typeText('.terminal-window', 'sudo apt-get install git-all', 0, 200);
 }
 
+//Function will type one letter at a time of 'string' to the 'target' element over a give 'interval'
 function typeText(target, string, index, interval) {
   if (index < string.length) {
     $(target).append(string[index++]);
@@ -21,10 +20,11 @@ function typeText(target, string, index, interval) {
     $(target).append('\nuser@terminal:~$ ');
 }
 
+//Functions listening once document is loaded
 function init() {
   //Button clicked will Load Modal
-  $('.btn').click(loadModal);
-  $('#gitWin').click(gitWin);
+  $('.main-btn').click(loadModal);
+  $('#gitLin').click(gitInstall);
 };
 
 $(document).ready(init);
