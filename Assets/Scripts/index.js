@@ -3,6 +3,9 @@ function loadModal() {
   var button_id = this.id;
   var modal_id = '#modal-'.concat(button_id.substring(7));
   $(modal_id).modal();
+  if(modal_id == "modal-diagrams") {
+    $("#carousel-example-generic").carousel();
+  }
 };
 
 //Function displays proper instructions to modal terminal display
