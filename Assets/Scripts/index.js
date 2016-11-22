@@ -4,7 +4,7 @@ function loadModal() {
   var modal_id = '#modal-'.concat(button_id.substring(7));
   $(modal_id).modal();
   if(modal_id == "modal-diagrams") {
-    $("#carousel-example-generic").carousel();
+    $("#diagrams-carousel").carousel();
   }
 };
 

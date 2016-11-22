@@ -146,8 +146,24 @@ img {
   width: 100%;
 }
 
-.carousel {
+.carousel-inner {
+  margin-bottom: 10px;
+}
+
+#diagrams-carousel, .carousel-inner, .item {
   height: 100%;
   width: 100%;
-  
+}
+
+.carousel-indicators {
+  bottom: -20px;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    background-color: white;
+    box-shadow: inset 1px 1px 1px 1px black;
+}
+.carousel-indicators .active {
+  background-color: black;
 }
