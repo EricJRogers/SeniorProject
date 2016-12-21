@@ -31,7 +31,7 @@ function generateInstruction() {
       typeText('.terminal-window', 'sudo apt-get install osx', 0, 200);
       break;
     case "gitClone":
-      typeText('.terminal-window', 'git clone "repository link"', 0, 200);
+      typeText('.terminal-window', 'git clone https://github.com/"repository link"', 0, 200);
       break;
     //Begin modal-2 instructions
     //Begin modal-3 instructions
@@ -61,6 +61,7 @@ function typeText(target, string, index, interval) {
 //Clears terminal text on Modal close
 function clearTerminal() {
   clearTimeout(typeTimer);
+  typeTimer = null;
   $('.terminal-window').empty();
   $('.terminal-window').append('user@terminal:~$ ');
 }

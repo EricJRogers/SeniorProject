@@ -3,23 +3,31 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- BEGIN ASSET IMPORTS HTML -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link type="text/css" rel="stylesheet" href="../Assets/Stylesheets/index.css"/>
     <script type="text/javascript" src="../Assets/Scripts/index.js"></script>
+    <!-- END ASSET IMPORTS HTML -->
+    
     <title>MCLA GitHub Tutorial</title>
   </head>
 
   <body>
+    <!-- BEGIN HEADER HTML -->
     <div class="page-header"></div>
     <div class="jumbotron">
       <img alt="MCLA" src="../Assets/Images/mcla-logo.png">
       <img alt="Massachusetts College of Liberal Arts" src="../Assets/Images/mcla-logo-2.png">
       <img alt="GitHub Tutorial" src="../Assets/Images/title.png" id="title-img">
     </div>
+    <!-- END HEADER HTML -->
 
+    <!-- BEGIN BODY HTML -->
     <div class="container-fluid">
+      <!-- BEGIN MENU HTML -->
       <div class="left col-md-2">
         <div id="menu-panel" class="panel panel-primary">
           <div class="panel-heading">
@@ -41,8 +49,11 @@
           </div>
         </div>
       </div>
+      <!-- END MENU HTML -->
 
+      <!-- BEGIN MAIN-BODY HTML -->
       <div class="main col-md-10">
+        <!-- BEGIN BASICS PANEL HTML -->
         <div class="panel panel-primary">
           <div class="panel-heading">
             <p class="panel-title">Basics</p>
@@ -73,7 +84,9 @@
             </div>
           </div>
         </div>
+        <!-- END BASICS PANEL HTML -->
 
+        <!-- BEGIN INTERMEDIATE PANEL HTML -->
         <div class="panel panel-primary">
           <div class="panel-heading">
             <p class="panel-title">Intermediate</p>
@@ -104,7 +117,9 @@
             </div>
           </div>
         </div>
-
+        <!-- END INTERMEDIATE PANEL HTML -->
+        
+        <!-- BEGIN ADVANCED PANEL HTML -->
         <div class="panel panel-primary">
           <div class="panel-heading">
             <p class="panel-title">Advanced</p>
@@ -135,6 +150,9 @@
             </div>
           </div>
         </div>
+        <!-- END ADVANCED PANEL HTML -->
+        
+        <!-- BEGIN MISC INFO PANEL HTML -->
         <div class="panel panel-primary">
           <div class="panel-heading">
             <p class="panel-title">Miscellaneous Information</p>
@@ -165,9 +183,13 @@
             </div>
           </div>
         </div>
+        <!-- END MISC INFO PANEL HTML -->
       </div>
+      <!-- END MAIN-BODY HTML -->
     </div>
+    <!-- END BODY HTML -->
 
+    <!-- BEGIN MODAL HTML -->
     <div id="modal-1" class="modal fade">
       <div class="modal-content">
         <div class="modal-header">
@@ -190,7 +212,7 @@
             greatly used in the Software Development industry.  Having prior experience and knowledge of GitHub and how to properly use a variety of
             its features is a marketable skill that could be included on a resume.</p>
           <h4>Basic Git Workflow</h4>
-          <div id="modal-1-img">
+          <div class="modal-img">
             <img src="../Assets/Images/BasicGit.png" alt="No Image Found"/>
           </div>
         </div>
@@ -238,12 +260,12 @@
             </div>
             <div class="body-right col-md-4 col-xs-12">
               <span>Saving Changes to GitHub</span>
-              <div id="gitAdd" class="btn btn-primary">1. Add to Staging Area</div>
-              <div id="gitCommit" class="btn btn-primary">2. Commit to Local Repository</div>
-              <div id="gitPush" class="btn btn-primary">3. Push to Remote Repository</div>
+              <div id="gitAdd" class="btn btn-primary modal-btn">1. Add to Staging Area</div>
+              <div id="gitCommit" class="btn btn-primary modal-btn">2. Commit to Local Repository</div>
+              <div id="gitPush" class="btn btn-primary modal-btn">3. Push to Remote Repository</div>
               <br>
               <span>Get Most Recent Work from GitHub</span>
-              <div id="gitPull" class="btn btn-primary">Pull from Remote Repository</div>
+              <div id="gitPull" class="btn btn-primary modal-btn">Pull from Remote Repository</div>
             </div>
           </div>
           <div class="body-bottom col-md-12 col-xs-12">
@@ -268,10 +290,10 @@
               <textarea class="terminal-window col-xs-12" disabled>user@terminal:~$ </textarea>
             </div>
             <div class="body-right col-md-4 col-xs-12">
-              <div id="gitWin" class="btn btn-primary">Install Git (Windows)</div>
-              <div id="gitLin" class="btn btn-primary">Install Git (Linux)</div>
-              <div id="gitOSX" class="btn btn-primary">Install Git (MacOS)</div>
-              <div id="gitClone" class="btn btn-primary">Clone GitHub Repository</div>
+              <div id="gitWin" class="btn btn-primary modal-btn">Install Git (Windows)</div>
+              <div id="gitLin" class="btn btn-primary modal-btn">Install Git (Linux)</div>
+              <div id="gitOSX" class="btn btn-primary modal-btn">Install Git (MacOS)</div>
+              <div id="gitClone" class="btn btn-primary modal-btn">Clone GitHub Repository</div>
             </div>
           </div>
           <div class="body-bottom col-md-12 col-xs-12">
@@ -296,10 +318,10 @@
               <textarea class="terminal-window col-xs-12" disabled>user@terminal:~$ </textarea>
             </div>
             <div class="body-right col-md-4 col-xs-12">
-              <div id="newBranch" class="btn btn-primary">Create New Branch</div>
-              <div id="switchBranch" class="btn btn-primary">Switch Branch</div>
-              <div id="viewBranch" class="btn btn-primary">View Branches</div>
-              <div id="delBranch" class="btn btn-primary">Delete A Branch</div>
+              <div id="newBranch" class="btn btn-primary modal-btn">Create New Branch</div>
+              <div id="switchBranch" class="btn btn-primary modal-btn">Switch Branch</div>
+              <div id="viewBranch" class="btn btn-primary modal-btn">View Branches</div>
+              <div id="delBranch" class="btn btn-primary modal-btn">Delete A Branch</div>
             </div>
           </div>
           <div class="body-bottom col-md-12 col-xs-12">
@@ -324,10 +346,10 @@
               <textarea class="terminal-window col-xs-12" disabled>user@terminal:~$ </textarea>
             </div>
             <div class="body-right col-md-4 col-xs-12">
-              <div id="gitWin" class="btn btn-primary">Install Git (Windows)</div>
-              <div id="gitLin" class="btn btn-primary">Install Git (Linux)</div>
-              <div id="gitOSX" class="btn btn-primary">Install Git (MacOS)</div>
-              <div id="gitClone" class="btn btn-primary">Clone GitHub Repository</div>
+              <div id="gitWin" class="btn btn-primary modal-btn">Install Git (Windows)</div>
+              <div id="gitLin" class="btn btn-primary modal-btn">Install Git (Linux)</div>
+              <div id="gitOSX" class="btn btn-primary modal-btn">Install Git (MacOS)</div>
+              <div id="gitClone" class="btn btn-primary modal-btn">Clone GitHub Repository</div>
             </div>
           </div>
           <div class="body-bottom col-md-12 col-xs-12">
@@ -352,10 +374,10 @@
               <textarea class="terminal-window col-xs-12" disabled>user@terminal:~$ </textarea>
             </div>
             <div class="body-right col-md-4 col-xs-12">
-              <div id="gitWin" class="btn btn-primary">Install Git (Windows)</div>
-              <div id="gitLin" class="btn btn-primary">Install Git (Linux)</div>
-              <div id="gitOSX" class="btn btn-primary">Install Git (MacOS)</div>
-              <div id="gitClone" class="btn btn-primary">Clone GitHub Repository</div>
+              <div id="gitWin" class="btn btn-primary modal-btn">Install Git (Windows)</div>
+              <div id="gitLin" class="btn btn-primary modal-btn">Install Git (Linux)</div>
+              <div id="gitOSX" class="btn btn-primary modal-btn">Install Git (MacOS)</div>
+              <div id="gitClone" class="btn btn-primary modal-btn">Clone GitHub Repository</div>
             </div>
           </div>
           <div class="body-bottom col-md-12 col-xs-12">
@@ -380,10 +402,10 @@
               <textarea class="terminal-window col-xs-12" disabled>user@terminal:~$ </textarea>
             </div>
             <div class="body-right col-md-4 col-xs-12">
-              <div id="gitWin" class="btn btn-primary">Install Git (Windows)</div>
-              <div id="gitLin" class="btn btn-primary">Install Git (Linux)</div>
-              <div id="gitOSX" class="btn btn-primary">Install Git (MacOS)</div>
-              <div id="gitClone" class="btn btn-primary">Clone GitHub Repository</div>
+              <div id="gitWin" class="btn btn-primary modal-btn">Install Git (Windows)</div>
+              <div id="gitLin" class="btn btn-primary modal-btn">Install Git (Linux)</div>
+              <div id="gitOSX" class="btn btn-primary modal-btn">Install Git (MacOS)</div>
+              <div id="gitClone" class="btn btn-primary modal-btn">Clone GitHub Repository</div>
             </div>
           </div>
           <div class="body-bottom col-md-12 col-xs-12">
@@ -408,10 +430,10 @@
               <textarea class="terminal-window col-xs-12" disabled>user@terminal:~$ </textarea>
             </div>
             <div class="body-right col-md-4 col-xs-12">
-              <div id="gitWin" class="btn btn-primary">Install Git (Windows)</div>
-              <div id="gitLin" class="btn btn-primary">Install Git (Linux)</div>
-              <div id="gitOSX" class="btn btn-primary">Install Git (MacOS)</div>
-              <div id="gitClone" class="btn btn-primary">Clone GitHub Repository</div>
+              <div id="gitWin" class="btn btn-primary modal-btn">Install Git (Windows)</div>
+              <div id="gitLin" class="btn btn-primary modal-btn">Install Git (Linux)</div>
+              <div id="gitOSX" class="btn btn-primary modal-btn">Install Git (MacOS)</div>
+              <div id="gitClone" class="btn btn-primary modal-btn">Clone GitHub Repository</div>
             </div>
           </div>
           <div class="body-bottom col-md-12 col-xs-12">
@@ -436,10 +458,10 @@
               <textarea class="terminal-window col-xs-12" disabled>user@terminal:~$ </textarea>
             </div>
             <div class="body-right col-md-4 col-xs-12">
-              <div id="gitWin" class="btn btn-primary">Install Git (Windows)</div>
-              <div id="gitLin" class="btn btn-primary">Install Git (Linux)</div>
-              <div id="gitOSX" class="btn btn-primary">Install Git (MacOS)</div>
-              <div id="gitClone" class="btn btn-primary">Clone GitHub Repository</div>
+              <div id="gitWin" class="btn btn-primary modal-btn">Install Git (Windows)</div>
+              <div id="gitLin" class="btn btn-primary modal-btn">Install Git (Linux)</div>
+              <div id="gitOSX" class="btn btn-primary modal-btn">Install Git (MacOS)</div>
+              <div id="gitClone" class="btn btn-primary modal-btn">Clone GitHub Repository</div>
             </div>
           </div>
           <div class="body-bottom col-md-12 col-xs-12">
@@ -464,10 +486,10 @@
               <textarea class="terminal-window col-xs-12" disabled>user@terminal:~$ </textarea>
             </div>
             <div class="body-right col-md-4 col-xs-12">
-              <div id="gitWin" class="btn btn-primary">Install Git (Windows)</div>
-              <div id="gitLin" class="btn btn-primary">Install Git (Linux)</div>
-              <div id="gitOSX" class="btn btn-primary">Install Git (MacOS)</div>
-              <div id="gitClone" class="btn btn-primary">Clone GitHub Repository</div>
+              <div id="gitWin" class="btn btn-primary modal-btn">Install Git (Windows)</div>
+              <div id="gitLin" class="btn btn-primary modal-btn">Install Git (Linux)</div>
+              <div id="gitOSX" class="btn btn-primary modal-btn">Install Git (MacOS)</div>
+              <div id="gitClone" class="btn btn-primary modal-btn">Clone GitHub Repository</div>
             </div>
           </div>
           <div class="body-bottom col-md-12 col-xs-12">
@@ -492,10 +514,10 @@
               <textarea class="terminal-window col-xs-12" disabled>user@terminal:~$ </textarea>
             </div>
             <div class="body-right col-md-4 col-xs-12">
-              <div id="gitWin" class="btn btn-primary">Install Git (Windows)</div>
-              <div id="gitLin" class="btn btn-primary">Install Git (Linux)</div>
-              <div id="gitOSX" class="btn btn-primary">Install Git (MacOS)</div>
-              <div id="gitClone" class="btn btn-primary">Clone GitHub Repository</div>
+              <div id="gitWin" class="btn btn-primary modal-btn">Install Git (Windows)</div>
+              <div id="gitLin" class="btn btn-primary modal-btn">Install Git (Linux)</div>
+              <div id="gitOSX" class="btn btn-primary modal-btn">Install Git (MacOS)</div>
+              <div id="gitClone" class="btn btn-primary modal-btn">Clone GitHub Repository</div>
             </div>
           </div>
           <div class="body-bottom col-md-12 col-xs-12">
@@ -570,6 +592,7 @@
         <div class="modal-footer"></div>
       </div>
     </div>
+    <!-- END MODAL HTML -->
 
   </body>
 </html>
