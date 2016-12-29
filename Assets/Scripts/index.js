@@ -28,7 +28,12 @@ function generateInstruction() {
       typeText('.terminal-window', 'sudo apt-get install git-all', 0, 200);
       break;
     case "gitOSX":
-      typeText('.terminal-window', 'sudo apt-get install osx', 0, 200);
+      typeText('.terminal-window', 'git', 0, 200);
+      break;
+    case "gitConfig":
+      typeText('.terminal-window', 'git config --global user.name "username"', 0, 200, function() {
+        typeText('.terminal-window', 'git config --global user.email "email"', 0, 200);
+      });
       break;
     case "gitClone":
       typeText('.terminal-window', 'git clone https://github.com/"repository link"', 0, 200);
@@ -47,14 +52,16 @@ function generateInstruction() {
 }
 
 //Function will type one letter at a time of 'string' to the 'target' element over a give 'interval'
-function typeText(target, string, index, interval) {
+function typeText(target, string, index, interval, callback) {
   if (index < string.length) {
     $(target).append(string[index++]);
-    typeTimer = setTimeout(function () { typeText(target, string, index, interval); }, interval);
+    typeTimer = setTimeout(function () { typeText(target, string, index, interval, callback); }, interval);
   }
   else {
     $(target).append('\nuser@terminal:~$ ');
     typeTimer = null;
+    //Callback refers to another line of instructions to be printed out to the terminal immediately after the preceding line of instructions
+    if(callback) callback();
   }
 }
 

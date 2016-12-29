@@ -17,6 +17,21 @@ img {
   background-color: #12396F
 }
 
+.page-footer {
+  height: 35px;
+  background-color: white;
+  border-top-color: #F1BC00;
+  border-top-width: medium;
+  border-top-style: solid;
+}
+
+.copyright {
+  margin: 0px;
+  padding: 10px 0px 0px 0px;
+  color: #12396F;
+  text-align: center;
+}
+
 .jumbotron {
   overflow: auto;
   border-bottom-color: #F1BC00;
