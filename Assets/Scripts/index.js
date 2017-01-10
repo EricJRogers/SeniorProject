@@ -20,7 +20,13 @@ function generateInstruction() {
   }
 
   switch(this.id) {
-    //Begin modal-1 instructions
+    //General modal instructions
+    case "updateMaster":
+      typeText('.terminal-window', 'git checkout master', 0, 200, function() {
+        typeText('.terminal-window', 'git pull upstream master', 0, 200);
+      });
+      break;
+    //Begin modal-2 instructions
     case "gitWin":
       typeText('.terminal-window', 'sudo apt-get install windows', 0, 200);
       break;
@@ -38,9 +44,7 @@ function generateInstruction() {
     case "gitClone":
       typeText('.terminal-window', 'git clone https://github.com/"repository link"', 0, 200);
       break;
-    //Begin modal-2 instructions
     //Begin modal-3 instructions
-    //Begin modal-4 instructions
     //Begin modal-5 instructions
     //Begin modal-6 instructions
     //Begin modal-7 instructions
