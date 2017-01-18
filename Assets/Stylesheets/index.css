@@ -75,6 +75,11 @@ img {
   overflow: hidden;
 }
 
+.btn-default {
+  margin-right: 10px;
+  width: 100px;
+}
+
 .btn-title {
   color: #F1BC00;
   font-weight: bold;
@@ -90,6 +95,7 @@ img {
   transform: translate(-50%, -50%);
   width: 65%;
   height: 75%;
+  overflow: hidden;
 }
 
 .modal-body {
