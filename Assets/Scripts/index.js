@@ -28,7 +28,7 @@ function generateInstruction() {
       break;
     //Begin modal-2 instructions
     case "gitWin":
-      typeText('.terminal-window', 'CANNOT INSTALL GIT FROM WINDOWS TERMINAL', 0, 200);
+      typeText('.terminal-window', 'see instructions below to install Git on Windows', 0, 200);
       break;
     case "gitLin":
       typeText('.terminal-window', 'sudo apt-get install git-all', 0, 200);
