@@ -10,7 +10,7 @@ function loadModal() {
   if(modal_id == "modal-diagrams") {
     $("#diagrams-carousel").carousel();
   }
-};
+}
 
 //Function displays proper instructions to modal terminal display based on id of modal-btn clicked
 function generateInstruction() {
@@ -28,7 +28,7 @@ function generateInstruction() {
       break;
     //Begin modal-2 instructions
     case "gitWin":
-      typeText('.terminal-window', 'sudo apt-get install windows', 0, 200);
+      typeText('.terminal-window', 'CANNOT INSTALL GIT FROM WINDOWS TERMINAL', 0, 200);
       break;
     case "gitLin":
       typeText('.terminal-window', 'sudo apt-get install git-all', 0, 200);
@@ -85,6 +85,6 @@ function init() {
   $('.modal-btn').click(generateInstruction);
   //Will clear terminal window when modal becomes hidden
   $('.modal').on('hidden.bs.modal', clearTerminal);
-};
+}
 
 $(document).ready(init);
