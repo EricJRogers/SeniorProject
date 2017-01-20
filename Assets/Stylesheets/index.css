@@ -1,3 +1,4 @@
+/*  Main Page CSS  */
 body {
   width: auto;
   margin: 0;
@@ -89,6 +90,7 @@ img {
   margin-bottom: 0px;
 }
 
+/*  Modal CSS  */
 .modal-content {
   left: 50%; top: 50%;
   transform: translate(-50%, -50%);
@@ -158,13 +160,10 @@ img {
   height: 40%;
   margin: 0px 0px 0px 0px;
   padding: 15px 15px 0px 15px;
-  overflow-y: scroll;
+  overflow: auto;
 }
 
-.modal-img {
-  width: 100%;
-}
-
+/*  Carousel CSS  */
 .carousel-inner {
   margin-bottom: 10px;
 }
@@ -185,4 +184,8 @@ img {
 }
 .carousel-indicators .active {
   background-color: black;
+}
+
+.modal-img {
+  width: 100%;
 }

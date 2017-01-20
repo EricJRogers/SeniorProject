@@ -48,6 +48,21 @@ function generateInstruction() {
       typeText('.terminal-window', 'git clone "insert repository url from GitHub"', 0, 200);
       break;
     //Begin modal-3 instructions
+    case "gitAdd":
+      typeText('.terminal-window', 'git add .', 0, 200);
+      break;
+    case "gitCommit":
+      typeText('.terminal-window', 'git commit -m "enter commit message"', 0, 200);
+      break;
+    case "gitPush":
+      typeText('.terminal-window', 'git push origin master', 0, 200);
+      break;
+    case "gitStatus":
+      typeText('.terminal-window', 'git status', 0, 200);
+      break;
+    case "gitPull":
+      typeText('.terminal-window', 'git pull', 0, 200);
+      break;
     //Begin modal-5 instructions
     //Begin modal-6 instructions
     //Begin modal-7 instructions
