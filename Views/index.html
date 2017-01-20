@@ -225,38 +225,43 @@
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Getting Started</h4>
         </div>
-        <div class="modal-body">
-          <div class="modal-body-top col-md-12">
-            <div class="modal-body-left col-md-8 col-xs-12">
-              <img class="terminal-title col-xs-12" src="../Assets/Images/terminal-title.png" alt="No Image Found"/>
+        <div class="container modal-body">
+          <div class="row modal-body-top">
+            <div class="terminal col-md-8 col-xs-12">
+              <img class="terminal-title col-sm-12" src="../Assets/Images/terminal-title.png" alt="No Image Found"/>
               <textarea class="terminal-window col-xs-12" disabled>user@terminal:~$ </textarea>
             </div>
-            <div class="modal-body-right col-md-4 col-xs-12">
-              <div class="modal-button-group">
-                <div id="gitWin" class="btn btn-primary modal-btn">Install Git (Windows)</div>
-                <div id="gitLin" class="btn btn-primary modal-btn">Install Git (Linux)</div>
-                <div id="gitOSX" class="btn btn-primary modal-btn">Install Git (MacOS)</div>
-                <div id="gitConfig" class="btn btn-primary modal-btn">Configure GitHub</div>
-                <div id="gitClone" class="btn btn-primary modal-btn">Clone GitHub Repository</div>
-              </div>
+            <div class="modal-btn-group col-md-4 col-xs-12">
+              <div id="gitWin" class="btn btn-primary modal-btn">Install Git (Windows)</div>
+              <div id="gitLin" class="btn btn-primary modal-btn">Install Git (Linux)</div>
+              <div id="gitOSX" class="btn btn-primary modal-btn">Install Git (MacOS)</div>
+              <div id="gitConfig" class="btn btn-primary modal-btn">Configure GitHub</div>
+              <div id="checkConfig" class="btn btn-primary modal-btn">Check GitHub Configuration</div>
+              <div id="gitClone" class="btn btn-primary modal-btn">Clone GitHub Repository</div>
             </div>
           </div>
-          <div class="modal-body-bottom col-md-12 col-xs-12">
+          <div class="row modal-body-bottom col-md-12">
             <p><strong>Windows:</strong> To install Git for Windows <a href="https://git-scm.com/download/win" target="_blank">Click Here</a>.</p>
-            <p>Follow the setup to finish the installation with the pre-selected settings.  Once the install is complete, you will be able to find Git in your programs and 
+            <p>Follow the setup to finish the installation with the pre-selected settings.  Once the install is complete, you will be able to find Git in your programs and
             either launch it with the Git Bash, or Git CMD (this uses Windows Command Prompt).  Either option you choose will use the same Git commands used in this tutorial.  You will
-            notice there is an option for Git GUI, this is a nice tool but it is very important to understand how to use Git without the GUI before deciding to use this tool.  This is 
+            notice there is an option for Git GUI, this is a nice tool but it is very important to understand how to use Git without the GUI before deciding to use this tool.  This is
             important so you will know how to use Git even when you do not have access to Git GUI.</p>
-            
+
             <p><strong>Linux:</strong> To install Git on Linux, run the command shown in a terminal window.</p>
             <p>Git will install automatically, nothing further is needed for installation.</p>
-            
+
             <p><strong>MacOSX:</strong> To install Git on MacOSX, run the command shown in a terminal window.</p>
             <p>If Git is not already installed, you will then be asked if you would like to install git.  Select yes, and git will install onto your system.</p>
-            
-            <p><strong>Configuration:</strong></p>
-            
-            <p><strong>Clone a Repository:</strong></p>
+
+            <p><strong>Configuration:</strong>  Once you have Git installed, the first thing you should do is configure it to your identity.</p>
+            <p>Every Git commit you make uses this information, so it is important that you set this up.  Simply run the commands shown in the
+            terminal window, and you will be all set and ready to go.  If you would like to use a different identity from your global configuration you can run
+            the same commands without the "--global" tag in which ever project you are in.  This will not overwrite your global settings unless you include
+            the "--global" tag.</p>
+
+            <p><strong>Clone a Repository:</strong>  Once you have your GitHub Repository URL, run the command shown in the terminal window.</p>
+            <p>To get your GitHub Repository URL, simply log into GitHub and click on the repository you would like to clone.  On that page you will find
+            a green button that reads "Clone or Download", click that button and copy the URL displayed.
           </div>
         </div>
         <div class="modal-footer">

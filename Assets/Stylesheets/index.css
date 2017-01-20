@@ -99,48 +99,21 @@ img {
 
 .modal-body {
   height: 80%;
+  width: 100%;
   overflow: auto;
-  padding: 20px 10px 10px 10px;
+  padding: 10px 10px 0px 10px;
 }
 
 .modal-body-top {
-  height: 50%;
-  padding: 0px 0px 20px 0px;
+  height: 60%;
+  padding: 0px 0px 17.5px 0px;
   margin: 0px 0px 0px 0px;
-  border-bottom: solid;
+
 }
 
-.modal-body-left {
+.terminal {
   height: 100%;
-}
-
-.modal-body-right {
-  display: table-cell;
-  text-align: center;
-  height: 100%;
-  overflow: auto;
-  vertical-align: middle !important;
-}
-
-.modal-button-group {
-  vertical-align: middle;
-}
-
-.modal-body-left.col-xs-12 {
   margin: 0px 0px 10px 0px;
-}
-
-.modal-body-right.col-xs-12 {
-  margin: 0px 0px 10px 0px;
-}
-
-.modal-body-right .btn {
-  width: 100%;
-  margin: 0px 0px 10px 0px;
-}
-
-.modal-btn {
-  padding: 6px 0px 6px 0px;
 }
 
 .terminal-title {
@@ -156,15 +129,35 @@ img {
   color: white;
   height: 90%;
   width: 100%;
-  margin: 0px 0px 10px 0px;
+  margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 2px;
   resize: none;
   border: none;
 }
 
+.modal-btn-group {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  margin: 0px 0px 17.5px 0px;
+}
+
+.modal-btn-group .btn {
+  margin: 0px 0px 8px 0px;
+  padding: 6px 0px 6px 0px;
+  width: 80%;
+}
+
+.modal-btn-group .btn:last-child {
+  margin: 0px 0px 0px 0px;
+}
+
 .modal-body-bottom {
-  height: 45%;
-  margin: 10px 0px 10px 0px;
+  border-top: solid;
+  height: 40%;
+  margin: 0px 0px 0px 0px;
+  padding: 15px 15px 0px 15px;
   overflow-y: scroll;
 }
 

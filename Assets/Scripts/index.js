@@ -41,8 +41,11 @@ function generateInstruction() {
         typeText('.terminal-window', 'git config --global user.email "email"', 0, 200);
       });
       break;
+    case "checkConfig":
+      typeText('.terminal-window', 'git config --list', 0, 200);
+      break;
     case "gitClone":
-      typeText('.terminal-window', 'git clone https://github.com/"repository link"', 0, 200);
+      typeText('.terminal-window', 'git clone "insert repository url from GitHub"', 0, 200);
       break;
     //Begin modal-3 instructions
     //Begin modal-5 instructions
