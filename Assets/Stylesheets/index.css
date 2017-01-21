@@ -5,6 +5,15 @@ body {
   background-color: #CCCCCC;
 }
 
+#left-body {
+  padding: 0px 0px 0px 15px;
+  height: 100%!important;
+}
+
+.test-class {
+  height: 100%!important;
+}
+
 img {
   max-width: 100%;
   max-height: 100%;
@@ -41,16 +50,11 @@ img {
   background-color: white;
   color: #F1BC00;
   padding: 15px 30px 15px 30px !important;
-  margin-top: 0px;
-  margin-bottom: 20px;
+  margin: 0px 0px 15px 0px;
 }
 
 #title-img {
   float: right;
-}
-
-#menu-panel {
-
 }
 
 .panel-heading {
@@ -64,15 +68,24 @@ img {
   color: #F1BC00;
 }
 
+.panel-body {
+  width: 100%;
+}
+
 #menu-title {
   text-align: center;
 }
 
-.main-btn.col-xs-12 {
-  margin-top: 10px;
+@media (max-width: 767px) {
+  .row > .panel-col:first-child {
+    margin: 0px 0px 0px 0px;
+  }
+  .row > .panel-col {
+    margin: 5px 0px 0px 0px;
+  }
 }
 
-.btn.btn-primary.btn-block {
+.panel-btn {
   overflow: hidden;
 }
 
