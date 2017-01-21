@@ -7,11 +7,6 @@ body {
 
 #left-body {
   padding: 0px 0px 0px 15px;
-  height: 100%!important;
-}
-
-.test-class {
-  height: 100%!important;
 }
 
 img {
@@ -74,15 +69,6 @@ img {
 
 #menu-title {
   text-align: center;
-}
-
-@media (max-width: 767px) {
-  .row > .panel-col:first-child {
-    margin: 0px 0px 0px 0px;
-  }
-  .row > .panel-col {
-    margin: 5px 0px 0px 0px;
-  }
 }
 
 .panel-btn {
@@ -201,4 +187,56 @@ img {
 
 .modal-img {
   width: 100%;
+}
+
+/*  Rules for when screen is xs  */
+@media (max-width: 767px) {
+  #left-body {
+    padding: 0px 100px 0px 100px;
+  }
+  #right-body {
+    padding: 0px 100px 0px 100px;
+  }
+  .row > .panel-col:first-child {
+    margin: 0px 0px 0px 0px;
+  }
+  .row > .panel-col {
+    margin: 5px 0px 0px 0px;
+  }
+  .btn-subTitle {
+    display: none;
+  }
+  .btn-title {
+    margin: 0px 0px 0px 0px;
+  }
+  li a {
+    text-align: center;
+    font-weight: bold;
+  }
+}
+
+/*  Rules for when screen is sm  */
+@media (min-width: 768px) and (max-width: 991px) {
+  #left-body {
+    padding: 0px 100px 0px 100px;
+  }
+  #right-body {
+    padding: 0px 100px 0px 100px;
+  }
+  .row > .panel-col:first-child {
+    margin: 0px 0px 0px 0px;
+  }
+  .row > .panel-col {
+    margin: 5px 0px 0px 0px;
+  }
+  li a {
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+  }
+}
+
+/*  Rules for when screen is md and up  */
+@media (min-width: 992px) {
+  
 }
