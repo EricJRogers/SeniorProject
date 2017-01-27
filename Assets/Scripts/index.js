@@ -64,6 +64,21 @@ function generateInstruction() {
       typeText('.terminal-window', 'git pull', 0, 200);
       break;
     //Begin modal-5 instructions
+    case "createBranch":
+      typeText('.terminal-window', 'git branch "branch name"', 0, 200);
+      break;
+    case "viewBranches":
+      typeText('.terminal-window', 'git branch', 0, 200);
+      break;
+    case "switchBranch":
+      typeText('.terminal-window', 'git checkout "branch name"', 0, 200);
+      break;
+    case "checkoutNewBranch":
+      typeText('.terminal-window', 'git checkout -b "branch name"', 0, 200);
+      break;
+    case "delBranch":
+      typeText('.terminal-window', 'git branch -d "branch name"', 0, 200);
+      break;
     //Begin modal-6 instructions
     //Begin modal-7 instructions
     //Begin modal-8 instructions
@@ -98,7 +113,7 @@ function clearTerminal() {
 //Functions listening once document is loaded
 function init() {
   //Button clicked will Load Modal
-  $('.main-btn').click(loadModal);
+  $('.panel-btn').click(loadModal);
   //Modal-btn clicked will generate/display proper instructions
   $('.modal-btn').click(generateInstruction);
   //Will clear terminal window when modal becomes hidden

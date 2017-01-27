@@ -1,7 +1,6 @@
 /*  Main Page CSS  */
 body {
-  width: auto;
-  margin: 0;
+  margin: 0px 0px 0px 0px;
   background-color: #CCCCCC;
 }
 
@@ -212,6 +211,15 @@ img {
   li a {
     text-align: center;
     font-weight: bold;
+  }
+  .modal-content {
+    top: 50%;
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+  }
+  .modal {
+    padding: 0px 0px 0px 0px!important;
   }
 }
 
