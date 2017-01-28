@@ -80,9 +80,23 @@ function generateInstruction() {
       typeText('.terminal-window', 'git branch -d "branch name"', 0, 200);
       break;
     //Begin modal-6 instructions
-    //Begin modal-7 instructions
     //Begin modal-8 instructions
+    case "createFrok":
+      typeText('.terminal-window', 'see instructions below to Create Fork', 0, 200);
+      break;
+    case "checkRemote":
+      typeText('.terminal-window', 'git remote -v', 0, 200);
+      break;
+    case "setRemote":
+      typeText('.terminal-window', 'git remote add upstream "Original Fork Repository URL"', 0, 200);
+      break;
+    case "pullFork":
+      typeText('.terminal-window', 'git pull upstream master', 0, 200);
+      break;
     //Begin modal-9 instructions
+    //Begin modal-10 instructions
+    //Begin modal-11 instructions
+    //Begin modal-12 instructions
     default:
       typeText('.terminal-window', 'no instruction found', 0, 200);
   }

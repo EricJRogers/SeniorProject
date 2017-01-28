@@ -41,6 +41,7 @@
                     <li><a href="https://github.com/" target="_blank">GitHub</a></li>
                     <li><a href="https://sso.mcla.edu/" target="_blank">MCLA Portal</a></li>
                     <li><a id="button-index" class="panel-btn" href="#">Index Page</a></li>
+                    <li><a id="button-terms" class="panel-btn" href="#">Terminology</a></li>
                     <li><a id="button-diagrams" class="panel-btn" href="#">Diagrams</a></li>
                     <li><a href="https://git-scm.com/book/en/v2" target="_blank">Reference Book</a></li>
                     <li><a id="button-help" class="panel-btn" href="#">Get Help</a></li>
@@ -301,14 +302,24 @@
           </div>
           <div class="row modal-body-bottom">
             <div class="col-md-12">
-              <p><strong>Saving Changes to GitHub:</strong> To install Git on Linux, run the command shown in a terminal window.</p>
-              <p>Git will install automatically, nothing further is needed for installation.</p>
+              <p><strong>Add Changed Files to Staging Area:</strong> Make sure all files are saved after making changes.</p>
+              <p>There are a few ways to do this, the command provided (or 'git add -a') is the simplest way to add ALL changed, deleted, or new files in the Git Repository to the 
+              staging area.  This is great if you want to commit all changes made.  You can also add files individually to the staging area using (git add "file name"), you can add 
+              more than one file at a time by separating the file names by a space.</p>
 
-              <p><strong>Checking File States:</strong> To install Git on MacOSX, run the command shown in a terminal window.</p>
-              <p>If Git is not already installed, you will then be asked if you would like to install git.  Select yes, and git will install onto your system.</p>
+              <p><strong>Commit to Local Repository:</strong> It is suggested to add a commit message reflecting the changes made.</p>
+              <p>This will update your Local Repository with all the changes added to the Staging Area</p>
 
-              <p><strong>Pull code from GitHub:</strong> To install Git on MacOSX, run the command shown in a terminal window.</p>
-              <p>If Git is not already installed, you will then be asked if you would like to install git.  Select yes, and git will install onto your system.</p>
+              <p><strong>Push to Remote Repository:</strong> You will be prompted to enter your Git Email and Password.</p>
+              <p>This will push all the changes in your Local Repository to your Remote Repository, updating your files on GitHub.</p>
+              
+              <p><strong>Check File States:</strong> There are multiple status commands that may provide greater detail if desired, look at the provided Reference Book.</p>
+              <p>The basic status command is provided, this will display information regarding what files have been changed and what state the files are currently in.  The state of 
+              the files reference whether or not they have been staged, commited, or pushed.  If all changes have been pushed to your Remote Repository then not files will be displayed 
+              as everything is currently up to date.</p>
+              
+              <p><strong>Pull from Remote Repository:</strong> Be sure to Pull from your Remote Repository before beginning any new work on your project.</p>
+              <p>This will Pull the current state of your project down from your Remote Repository to your Local Repository.</p>
             </div>
           </div>
         </div>
@@ -491,23 +502,25 @@
               <textarea class="terminal-window" disabled>user@terminal:~$ </textarea>
             </div>
             <div class="modal-btn-group col-md-4 col-xs-12">
-              <div id="gitAdd" class="btn btn-primary modal-btn">Add to Staging Area</div>
-              <div id="gitCommit" class="btn btn-primary modal-btn">Commit to Local Repository</div>
-              <div id="gitPush" class="btn btn-primary modal-btn">Push to Remote Repository</div>
-              <div id="gitStatus" class="btn btn-primary modal-btn">Check File States</div>
-              <div id="gitPull" class="btn btn-primary modal-btn">Pull from Remote Repository</div>
+              <div id="createFork" class="btn btn-primary modal-btn">Creating a Fork</div>
+              <div id="checkRemote" class="btn btn-primary modal-btn">Check Fork Upstream</div>
+              <div id="setRemote" class="btn btn-primary modal-btn">Configure Fork Upstream</div>
+              <div id="pullFork" class="btn btn-primary modal-btn">Pull Fork Upstream</div>
             </div>
           </div>
           <div class="row modal-body-bottom">
             <div class="col-md-12">
-              <p><strong>Saving Changes to GitHub:</strong> To install Git on Linux, run the command shown in a terminal window.</p>
-              <p>Git will install automatically, nothing further is needed for installation.</p>
+              <p><strong>Creating a Fork:</strong> This must done on GitHub.</p>
+              <p>Locate project repository you would like to contribute to.</p>
 
-              <p><strong>Checking File States:</strong> To install Git on MacOSX, run the command shown in a terminal window.</p>
-              <p>If Git is not already installed, you will then be asked if you would like to install git.  Select yes, and git will install onto your system.</p>
+              <p><strong>Check Fork Upstream:</strong> By Default you will have to set this up.</p>
+              <p>After you set up your Fork Upstream, you can run this again to ensure it is set up correctly.</p>
 
-              <p><strong>Pull code from GitHub:</strong> To install Git on MacOSX, run the command shown in a terminal window.</p>
-              <p>If Git is not already installed, you will then be asked if you would like to install git.  Select yes, and git will install onto your system.</p>
+              <p><strong>Configure Fork Upstream:</strong> This will sync your upstream with the original project repository.</p>
+              <p>If you do not perform this step, you will not be able to pull the most current project code from GitHub, or be able to submit a Pull Request to the project owner.</p>
+              
+              <p><strong>Pull Fork Upstream:</strong> Make sure to switch to your master branch before using this command.</p>
+              <p>This will update your master branch with the most up to date code from the project Fork</p>
             </div>
           </div>
         </div>
@@ -669,6 +682,21 @@
     </div>
 
     <div id="modal-index" class="modal fade">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Index</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+    
+    <div id="modal-terms" class="modal fade">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
