@@ -303,8 +303,8 @@
           <div class="row modal-body-bottom">
             <div class="col-md-12">
               <p><strong>Add Changed Files to Staging Area:</strong> Make sure all files are saved after making changes.</p>
-              <p>There are a few ways to do this, the command provided (or 'git add -a') is the simplest way to add ALL changed, deleted, or new files in the Git Repository to the 
-              staging area.  This is great if you want to commit all changes made.  You can also add files individually to the staging area using (git add "file name"), you can add 
+              <p>There are a few ways to do this, the command provided (or 'git add -a') is the simplest way to add ALL changed, deleted, or new files in the Git Repository to the
+              staging area.  This is great if you want to commit all changes made.  You can also add files individually to the staging area using (git add "file name"), you can add
               more than one file at a time by separating the file names by a space.</p>
 
               <p><strong>Commit to Local Repository:</strong> It is suggested to add a commit message reflecting the changes made.</p>
@@ -312,12 +312,12 @@
 
               <p><strong>Push to Remote Repository:</strong> You will be prompted to enter your Git Email and Password.</p>
               <p>This will push all the changes in your Local Repository to your Remote Repository, updating your files on GitHub.</p>
-              
+
               <p><strong>Check File States:</strong> There are multiple status commands that may provide greater detail if desired, look at the provided Reference Book.</p>
-              <p>The basic status command is provided, this will display information regarding what files have been changed and what state the files are currently in.  The state of 
-              the files reference whether or not they have been staged, commited, or pushed.  If all changes have been pushed to your Remote Repository then not files will be displayed 
+              <p>The basic status command is provided, this will display information regarding what files have been changed and what state the files are currently in.  The state of
+              the files reference whether or not they have been staged, commited, or pushed.  If all changes have been pushed to your Remote Repository then not files will be displayed
               as everything is currently up to date.</p>
-              
+
               <p><strong>Pull from Remote Repository:</strong> Be sure to Pull from your Remote Repository before beginning any new work on your project.</p>
               <p>This will Pull the current state of your project down from your Remote Repository to your Local Repository.</p>
             </div>
@@ -346,14 +346,10 @@
             <p>For starters, GitHub is used at MCLA by the Computer Science Dept to easily distribute class examples and view student assignments.
               More specifically, some Professors may have you "clone" a class repository to retrieve examples that they are providing for you, and
               may also require that you upload your homework assignments to GitHub for them to view and grade.</p>
-            <p>Outside of use at MCLA, GitHub is also a great tool for version control.  Version control allows you to look back at previous versions
-              of your code.  For instance, if you did a bunch of work on a project and managed to break more than you were able to fix, you can look
-              back and retrieve and earlier version that was working properly before you made some of those changes.  Furthermore, GitHub is also
-              greatly used in the Software Development industry.  Having prior experience and knowledge of GitHub and how to properly use a variety of
-              its features is a marketable skill that could be included on a resume.</p>
-            <h4>Basic Git Workflow</h4>
+            <p>Branches are on your local repository.</p>
+            <h4>Branches & Git Workflow</h4>
             <div class="modal-img">
-              <img src="../Assets/Images/BasicGit.png" alt="No Image Found"/>
+              <img src="../Assets/Images/git-branch.jpg" alt="No Image Found"/>
             </div>
           </div>
         </div>
@@ -386,8 +382,8 @@
           <div class="row modal-body-bottom">
             <div class="col-md-12">
               <p><strong>Creating and Switching Branches:</strong>  You should always switch to Master branch, and do a pull before creating a branch!</p>
-              <p>There are two ways to do this.  You can do the steps individually by first creating the branch and then switching to that branch, or you can 
-              use the shortcut command that will do both at the same time.  Branch names should reflect the task you are working on with that branch, common 
+              <p>There are two ways to do this.  You can do the steps individually by first creating the branch and then switching to that branch, or you can
+              use the shortcut command that will do both at the same time.  Branch names should reflect the task you are working on with that branch, common
               practice in industry is using the assigned task ID.</p>
 
               <p><strong>Viewing Branches:</strong></p>
@@ -395,7 +391,7 @@
               pointing too will have an asterisk and be a different color.</p>
 
               <p><strong>Deleting a Branch:</strong></p>
-              <p>You should know how to delete a branch whether you made a spelling mistake on the branch name, or simply want to clear out branches that are no longer needed.  
+              <p>You should know how to delete a branch whether you made a spelling mistake on the branch name, or simply want to clear out branches that are no longer needed.
               One thing to keep in mind is that you cannot delete the branch that your HEAD is currently pointing to.</p>
             </div>
           </div>
@@ -419,18 +415,18 @@
               <textarea class="terminal-window" disabled>user@terminal:~$ </textarea>
             </div>
             <div class="modal-btn-group col-md-4 col-xs-12">
-              <div id="gitAdd" class="btn btn-primary modal-btn">Add to Staging Area</div>
-              <div id="gitCommit" class="btn btn-primary modal-btn">Commit to Local Repository</div>
-              <div id="gitPush" class="btn btn-primary modal-btn">Push to Remote Repository</div>
-              <div id="gitStatus" class="btn btn-primary modal-btn">Check File States</div>
-              <div id="gitPull" class="btn btn-primary modal-btn">Pull from Remote Repository</div>
+              <div id="branchAdd" class="btn btn-primary modal-btn">Add to Staging Area</div>
+              <div id="branchCommit" class="btn btn-primary modal-btn">Commit to Local Repository</div>
+              <div id="pushBranch" class="btn btn-primary modal-btn">Push Branch to Remote Repository</div>
+              <div id="mergeBranch" class="btn btn-primary modal-btn">Merge Branch to Master</div>
+              <div id="pushMergedBranch" class="btn btn-primary modal-btn">Push Master After Merge</div>
             </div>
           </div>
           <div class="row modal-body-bottom">
             <div class="col-md-12">
               <p><strong>Add Changed Files to Staging Area:</strong> Make sure all files are saved after making changes.</p>
-              <p>There are a few ways to do this, the command provided (or 'git add -a') is the simplest way to add ALL changed, deleted, or new files in the Git Repository to the 
-              staging area.  This is great if you want to commit all changes made.  You can also add files individually to the staging area using (git add "file name"), you can add 
+              <p>There are a few ways to do this, the command provided (or 'git add -a') is the simplest way to add ALL changed, deleted, or new files in the Git Repository to the
+              staging area.  This is great if you want to commit all changes made.  You can also add files individually to the staging area using (git add "file name"), you can add
               more than one file at a time by separating the file names by a space.</p>
 
               <p><strong>Commit to Local Repository:</strong> It is suggested to add a commit message reflecting the changes made.</p>
@@ -438,12 +434,12 @@
 
               <p><strong>Push to Remote Repository:</strong> You will be prompted to enter your Git Email and Password.</p>
               <p>This will push all the changes in your Local Repository to your Remote Repository, updating your files on GitHub.</p>
-              
+
               <p><strong>Check File States:</strong> There are multiple status commands that may provide greater detail if desired, look at the provided Reference Book.</p>
-              <p>The basic status command is provided, this will display information regarding what files have been changed and what state the files are currently in.  The state of 
-              the files reference whether or not they have been staged, commited, or pushed.  If all changes have been pushed to your Remote Repository then not files will be displayed 
+              <p>The basic status command is provided, this will display information regarding what files have been changed and what state the files are currently in.  The state of
+              the files reference whether or not they have been staged, commited, or pushed.  If all changes have been pushed to your Remote Repository then not files will be displayed
               as everything is currently up to date.</p>
-              
+
               <p><strong>Pull from Remote Repository:</strong> Be sure to Pull from your Remote Repository before beginning any new work on your project.</p>
               <p>This will Pull the current state of your project down from your Remote Repository to your Local Repository.</p>
             </div>
@@ -518,7 +514,7 @@
 
               <p><strong>Configure Fork Upstream:</strong> This will sync your upstream with the original project repository.</p>
               <p>If you do not perform this step, you will not be able to pull the most current project code from GitHub, or be able to submit a Pull Request to the project owner.</p>
-              
+
               <p><strong>Pull Fork Upstream:</strong> Make sure to switch to your master branch before using this command.</p>
               <p>This will update your master branch with the most up to date code from the project Fork</p>
             </div>
@@ -695,7 +691,7 @@
         </div>
       </div>
     </div>
-    
+
     <div id="modal-terms" class="modal fade">
       <div class="modal-content">
         <div class="modal-header">

@@ -20,13 +20,17 @@ function generateInstruction() {
   }
 
   switch(this.id) {
-    //General modal instructions
-    case "updateMaster":
-      typeText('.terminal-window', 'git checkout master', 0, 200, function() {
-        typeText('.terminal-window', 'git pull upstream master', 0, 200);
-      });
+    //  Multiple modal instructions
+    case "gitAdd", "branchAdd":
+      typeText('.terminal-window', 'git add .', 0, 200);
       break;
-    //Begin modal-2 instructions
+    case "gitCommit", "branchCommit":
+      typeText('.terminal-window', 'git commit -m "enter commit message"', 0, 200);
+      break;
+    case "gitPush", "pushMergedBranch":
+      typeText('.terminal-window', 'git push origin master', 0, 200);
+      break;
+    //  Begin modal-2 instructions
     case "gitWin":
       typeText('.terminal-window', 'see instructions below to install Git on Windows', 0, 200);
       break;
@@ -47,23 +51,15 @@ function generateInstruction() {
     case "gitClone":
       typeText('.terminal-window', 'git clone "insert repository url from GitHub"', 0, 200);
       break;
-    //Begin modal-3 instructions
-    case "gitAdd":
-      typeText('.terminal-window', 'git add .', 0, 200);
-      break;
-    case "gitCommit":
-      typeText('.terminal-window', 'git commit -m "enter commit message"', 0, 200);
-      break;
-    case "gitPush":
-      typeText('.terminal-window', 'git push origin master', 0, 200);
-      break;
+    //  Begin modal-3 instructions - see Multiple Modal Instructions for gitAdd & gitCommit & gitPush
+
     case "gitStatus":
       typeText('.terminal-window', 'git status', 0, 200);
       break;
     case "gitPull":
       typeText('.terminal-window', 'git pull', 0, 200);
       break;
-    //Begin modal-5 instructions
+    //  Begin modal-5 instructions
     case "createBranch":
       typeText('.terminal-window', 'git branch "branch name"', 0, 200);
       break;
@@ -79,8 +75,14 @@ function generateInstruction() {
     case "delBranch":
       typeText('.terminal-window', 'git branch -d "branch name"', 0, 200);
       break;
-    //Begin modal-6 instructions
-    //Begin modal-8 instructions
+    //  Begin modal-6 instructions - see Multiple Modal Instructions for branchAdd & branchCommit & pushMergedBranch
+    case "pushBranch":
+      typeText('.terminal-window', 'git push origin "branch name"', 0, 200);
+      break;
+    case "mergeBranch":
+      typeText('.terminal-window', 'git merge "branch name"', 0, 200);
+      break;
+    //  Begin modal-8 instructions
     case "createFrok":
       typeText('.terminal-window', 'see instructions below to Create Fork', 0, 200);
       break;
@@ -93,10 +95,10 @@ function generateInstruction() {
     case "pullFork":
       typeText('.terminal-window', 'git pull upstream master', 0, 200);
       break;
-    //Begin modal-9 instructions
-    //Begin modal-10 instructions
-    //Begin modal-11 instructions
-    //Begin modal-12 instructions
+    //  Begin modal-9 instructions
+    //  Begin modal-10 instructions
+    //  Begin modal-11 instructions
+    //  Begin modal-12 instructions
     default:
       typeText('.terminal-window', 'no instruction found', 0, 200);
   }
