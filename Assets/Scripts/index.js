@@ -20,14 +20,17 @@ function generateInstruction() {
   }
 
   switch(this.id) {
-    //  Multiple modal instructions
-    case "gitAdd", "branchAdd":
+    //  Fall-through modal instructions (sameinstructions run for multiple cases)
+    case "gitAdd":
+    case "branchAdd":
       typeText('.terminal-window', 'git add .', 0, 200);
       break;
-    case "gitCommit", "branchCommit":
+    case "gitCommit":
+    case "branchCommit":
       typeText('.terminal-window', 'git commit -m "enter commit message"', 0, 200);
       break;
-    case "gitPush", "pushMergedBranch":
+    case "gitPush":
+    case "pushMergedBranch":
       typeText('.terminal-window', 'git push origin master', 0, 200);
       break;
     //  Begin modal-2 instructions
@@ -83,7 +86,7 @@ function generateInstruction() {
       typeText('.terminal-window', 'git merge "branch name"', 0, 200);
       break;
     //  Begin modal-8 instructions
-    case "createFrok":
+    case "createFork":
       typeText('.terminal-window', 'see instructions below to Create Fork', 0, 200);
       break;
     case "checkRemote":
