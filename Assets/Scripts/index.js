@@ -55,7 +55,6 @@ function generateInstruction() {
       typeText('.terminal-window', 'git clone "insert repository url from GitHub"', 0, 200);
       break;
     //  Begin modal-3 instructions - see Multiple Modal Instructions for gitAdd & gitCommit & gitPush
-
     case "gitStatus":
       typeText('.terminal-window', 'git status', 0, 200);
       break;
@@ -83,7 +82,9 @@ function generateInstruction() {
       typeText('.terminal-window', 'git push origin "branch name"', 0, 200);
       break;
     case "mergeBranch":
-      typeText('.terminal-window', 'git merge "branch name"', 0, 200);
+      typeText('.terminal-window', 'git checkout master', 0, 200, function() {
+        typeText('.terminal-window', 'git merge "branch name"', 0, 200);
+      });
       break;
     //  Begin modal-8 instructions
     case "createFork":

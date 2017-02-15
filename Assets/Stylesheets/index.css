@@ -161,6 +161,10 @@ img {
   overflow: auto;
 }
 
+.mergeConflictExample {
+  padding: 0px 0px 0px 100px;
+}
+
 /*  Carousel CSS  */
 .carousel-inner {
   margin-bottom: 10px;
@@ -246,5 +250,5 @@ img {
 
 /*  Rules for when screen is md and up  */
 @media (min-width: 992px) {
-  
+
 }

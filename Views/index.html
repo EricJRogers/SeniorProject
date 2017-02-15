@@ -337,16 +337,19 @@
         </div>
         <div class="container modal-body">
           <div class="row col-md-12">
-            <h4>What is GitHub?</h4>
-            <p>GitHub is a Git repository hosting service, but it adds many of its own features. While Git is a version control command line tool,
-              GitHub provides a Web-based graphical interface. It also provides access control and several collaboration features,
-              such as a wikis and basic task management tools for every project.  Some of the features provided by GitHub include creating Branches
-              and Forks, which will be covered later in the tutorial.</p>
-            <h4>Why is GitHub Important?</h4>
-            <p>For starters, GitHub is used at MCLA by the Computer Science Dept to easily distribute class examples and view student assignments.
-              More specifically, some Professors may have you "clone" a class repository to retrieve examples that they are providing for you, and
-              may also require that you upload your homework assignments to GitHub for them to view and grade.</p>
-            <p>Branches are on your local repository.</p>
+            <h4>What is a Branch?</h4>
+            <p>The way Git stores data is basically by saving a snapshot of your content at the time of commit.  Think of a Branch
+            as a pointer, in which points to a certain snapshot of your code.  Git tracks what Branch you are one with what is referred
+            to as the 'HEAD'.  This is a special pointer that points to the Branch you are currently on, and allows you to create and
+            switch between multiple Branches.  These Branches are stored on your Local Repository, and can be merged and pushed up to
+            GitHub once tasks are completed.</p>
+            <h4>Why Are Branches Important?</h4>
+            <p>By default you are provided with a Branch labeled 'master',but you can also make your own.  When you make a Branch,
+            it creates a new pointer with the name you provide and allows you to edit code on that Branch separately from your master
+            Branch.  This makes it easy to accomplish working on and managing multiple tasks without getting out of scope.  Imagine you
+            are working on a task, but get informed that something is broken and you need to fix it ASAP.  You can create a new Branch
+            and commit the fix for the code, without having to worry about pushing up unfinished code from your original task.  Without
+            Branches this would not be possible, and could potentially create a lot more problems by being forced to commit untested code.</p>
             <h4>Branches & Git Workflow</h4>
             <div class="modal-img">
               <img src="../Assets/Images/git-branch.jpg" alt="No Image Found"/>
@@ -424,24 +427,26 @@
           </div>
           <div class="row modal-body-bottom">
             <div class="col-md-12">
-              <p><strong>Add Changed Files to Staging Area:</strong> Make sure all files are saved after making changes.</p>
-              <p>There are a few ways to do this, the command provided (or 'git add -a') is the simplest way to add ALL changed, deleted, or new files in the Git Repository to the
-              staging area.  This is great if you want to commit all changes made.  You can also add files individually to the staging area using (git add "file name"), you can add
-              more than one file at a time by separating the file names by a space.</p>
+              <p><strong>Push Branch to Remote Repository: </strong>This will push your Branch directly to GitHub.</p>
+              <p>This is one way to commit changes in your Branch to GitHub and to merge it into Master.  When you use this command, you will then have to visit GitHub and submit
+              a Pull Request to merge your Branch into Master.  Here people in the group can review and make suggestions to your code, and then the code can be merged to the Master.</p>
 
-              <p><strong>Commit to Local Repository:</strong> It is suggested to add a commit message reflecting the changes made.</p>
-              <p>This will update your Local Repository with all the changes added to the Staging Area</p>
-
-              <p><strong>Push to Remote Repository:</strong> You will be prompted to enter your Git Email and Password.</p>
-              <p>This will push all the changes in your Local Repository to your Remote Repository, updating your files on GitHub.</p>
-
-              <p><strong>Check File States:</strong> There are multiple status commands that may provide greater detail if desired, look at the provided Reference Book.</p>
-              <p>The basic status command is provided, this will display information regarding what files have been changed and what state the files are currently in.  The state of
-              the files reference whether or not they have been staged, commited, or pushed.  If all changes have been pushed to your Remote Repository then not files will be displayed
-              as everything is currently up to date.</p>
-
-              <p><strong>Pull from Remote Repository:</strong> Be sure to Pull from your Remote Repository before beginning any new work on your project.</p>
-              <p>This will Pull the current state of your project down from your Remote Repository to your Local Repository.</p>
+              <p><strong>Merge Branch to Master: </strong> This will merge changes made on specified Branch to the Master Branch.</p>
+              <p>First you need to be sure to switch to your Master Branch, and then merge 'Branch Name'.  Git will automatically merge your Branch onto the Master Branch as long
+              as there are not merge conflicts.</p>
+              <p><strong>Push Master after Merge:</strong> This is done the same as a normal Push.</p>
+              <p>After you have merged your Branch onto the Master Branch succesfully, all that is left is to Push your Master up to GitHub.</p>
+              <p><strong>Merge Conflict: </strong>Merge conflicts happen, especially if multiple people are working on the same project.</p>
+              <p>A merge conflict occurs when you try to merge two branches that changed the same lines of code.  When there is a merge conflict, it will show in the terminal what
+              file(s) it is in.  From there look for these identifiers as shown below.  This shows which two versions of changes are conflicting with each other.  To fix this,
+              simply delete the <<, >>, and ==, leave the code you would like to keep, save and start the process to Push to GitHub again.</p>
+              <div class="mergeConflictExample">
+                <p><<<<<<<<<<<<<<<<<<<<<<<<<<<<<< HEAD</p>
+                <p>Code found above the ==== is version of code found on Master Branch(HEAD AT THE TIME OF BRANCH CREATION).</p>
+                <p>===================================</p>
+                <p>Code found below the ==== is version of code submitted on Branch you are trying to merge.</p>
+                <p>>>>>>>>>>>>>>>>>>>>>>>>>>>>> BRANCH</p>
+              </div>
             </div>
           </div>
         </div>
@@ -475,7 +480,7 @@
               its features is a marketable skill that could be included on a resume.</p>
             <h4>Basic Git Workflow</h4>
             <div class="modal-img">
-              <img src="../Assets/Images/BasicGit.png" alt="No Image Found"/>
+              <img src="../Assets/Images/ForkWorkFlow.png" alt="No Image Found"/>
             </div>
           </div>
         </div>
