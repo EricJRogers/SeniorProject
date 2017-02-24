@@ -170,16 +170,16 @@
                 </div>
                 <div class="panel-col col-md-4 col-xs-12">
                   <div id="button-11" class="panel-btn btn btn-primary btn-block">
-                    <p class="btn-title">Rewriting History</p>
+                    <p class="btn-title">Misc Commands</p>
                     <p class="btn-subTitle">Squashing Commits</p>
-                    <p class="btn-subTitle">Other Commit Manipulations</p>
+                    <p class="btn-subTitle">Advanced File Manipulations</p>
                   </div>
                 </div>
                 <div class="panel-col col-md-4 col-xs-12">
                   <div id="button-12" class="panel-btn btn btn-primary btn-block">
-                    <p class="btn-title">Misc Commands</p>
-                    <p class="btn-subTitle">Advanced File State</p>
-                    <p class="btn-subTitle">File Manipulations</p>
+                    <p class="btn-title">Merge VS Rebase</p>
+                    <p class="btn-subTitle">What is Rebasing</p>
+                    <p class="btn-subTitle">How do they differ</p>
                   </div>
                 </div>
               </div>
@@ -531,7 +531,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">GitHub Advanced</h4>
+          <h4 class="modal-title">Pushing with Forks</h4>
         </div>
         <div class="container modal-body">
           <div class="row modal-body-top">
@@ -540,23 +540,36 @@
               <textarea class="terminal-window" disabled>user@terminal:~$ </textarea>
             </div>
             <div class="modal-btn-group col-md-4 col-xs-12">
-              <div id="gitAdd" class="btn btn-primary modal-btn">Add to Staging Area</div>
-              <div id="gitCommit" class="btn btn-primary modal-btn">Commit to Local Repository</div>
-              <div id="gitPush" class="btn btn-primary modal-btn">Push to Remote Repository</div>
-              <div id="gitStatus" class="btn btn-primary modal-btn">Check File States</div>
-              <div id="gitPull" class="btn btn-primary modal-btn">Pull from Remote Repository</div>
+              <div id="pullReq" class="btn btn-primary modal-btn">Create Pull Requests</div>
+              <div id="mergePull" class="btn btn-primary modal-btn">Merging Pull Request</div>
+              <div id="mergeCon" class="btn btn-primary modal-btn">Merge Conflicts</div>
             </div>
           </div>
           <div class="row modal-body-bottom">
             <div class="col-md-12">
-              <p><strong>Saving Changes to GitHub:</strong> To install Git on Linux, run the command shown in a terminal window.</p>
-              <p>Git will install automatically, nothing further is needed for installation.</p>
+              <p><strong>Create Pull Request:</strong> Request your code be reviewed / merged with Project Master.</p>
+              <p>This is done on the GitHub website, after you follow the steps to push your changes up to YOUR Forked repository.  To push to your Forked
+              Repository, simply follow the steps outlined in previous modals for pushing code.</p>
+              <p>Next, go to the Original Project Repository, and click on the Pull Requests tab.  On the next page, you will find a New Pull Requests button
+              colored in green, click that to begin making your Pull Request.  The next page will have the title "Comparing Changes", this is where you will
+              do exactly that, compare the Master to your Branch being submitted.  There are two drop down menus just below the page title, one is prefixed with
+              'base', and the other with 'compare'.  The 'base' should always be the project Master, and under 'compare' should be the branch you are requesting
+              to merge.  After selecting these two drop downs, you can view the files that have been changed in the project on your branch in comparison to the
+              Master.  Click Create Pull Request, the next page allows you to enter a Pull Request Title and a description for what changes you made.  After that,
+              simply click Create Pull Request again and you are done.</p>
+              <p>After the Pull Request is submitted, people may make comments on a few changes they would like to see.  In this case you can make the changes to
+              the branch you submitted and just re-push it up to your Forked Repository, the Pull Request will automatically reflect those changes made.</p>
 
-              <p><strong>Checking File States:</strong> To install Git on MacOSX, run the command shown in a terminal window.</p>
-              <p>If Git is not already installed, you will then be asked if you would like to install git.  Select yes, and git will install onto your system.</p>
+              <p><strong>Merging Pull Request:</strong> This can only be done by the Project Owner, or those authorized to do so.</p>
+              <p>This also is done on the GitHub website, once the code has been reviewed and approved, there is a merge button at the bottom of the Pull Request
+              that will automatically merge the Pull Request into the Master.  Note:  If there are conflicts, these will need to be resolved prior to merging.</p>
 
-              <p><strong>Pull code from GitHub:</strong> To install Git on MacOSX, run the command shown in a terminal window.</p>
-              <p>If Git is not already installed, you will then be asked if you would like to install git.  Select yes, and git will install onto your system.</p>
+              <p><strong>Merge Conflicts:</strong> You can check for merge conflicts on your Pull Request.</p>
+              <p>At the bottom of the Pull Request will be a small section in which GitHub displays whether or not the code has conflicts, if it doesn't, GitHub will
+              report that the code can be automatically merged.  Otherwise, it will state that there are conflicts and cannot be automatically merged.</p>
+              <p>These conflicts can be resolved in almost the same manner as they are done with Branches, make sure your Master branch is up to date and then follow the
+              branch merge instructions to merge the Master into your branch.  Notice:  You are merging the Master TO YOUR Branch, NOT YOUR BRANCH TO YOUR MASTER.  This
+              means that your HEAD must be on your branch when you merge the two together.</p>
             </div>
           </div>
         </div>
@@ -570,27 +583,38 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Understanding GitHub</h4>
+          <h4 class="modal-title">Stash / Pop</h4>
         </div>
         <div class="container modal-body">
-          <div class="row col-md-12">
-            <h4>What is GitHub?</h4>
-            <p>GitHub is a Git repository hosting service, but it adds many of its own features. While Git is a version control command line tool,
-              GitHub provides a Web-based graphical interface. It also provides access control and several collaboration features,
-              such as a wikis and basic task management tools for every project.  Some of the features provided by GitHub include creating Branches
-              and Forks, which will be covered later in the tutorial.</p>
-            <h4>Why is GitHub Important?</h4>
-            <p>For starters, GitHub is used at MCLA by the Computer Science Dept to easily distribute class examples and view student assignments.
-              More specifically, some Professors may have you "clone" a class repository to retrieve examples that they are providing for you, and
-              may also require that you upload your homework assignments to GitHub for them to view and grade.</p>
-            <p>Outside of use at MCLA, GitHub is also a great tool for version control.  Version control allows you to look back at previous versions
-              of your code.  For instance, if you did a bunch of work on a project and managed to break more than you were able to fix, you can look
-              back and retrieve and earlier version that was working properly before you made some of those changes.  Furthermore, GitHub is also
-              greatly used in the Software Development industry.  Having prior experience and knowledge of GitHub and how to properly use a variety of
-              its features is a marketable skill that could be included on a resume.</p>
-            <h4>Basic Git Workflow</h4>
-            <div class="modal-img">
-              <img src="../Assets/Images/BasicGit.png" alt="No Image Found"/>
+          <div class="row modal-body-top">
+            <div class="terminal col-md-8 col-xs-12">
+              <img class="terminal-title" src="../Assets/Images/terminal-title.png" alt="No Image Found"/>
+              <textarea class="terminal-window" disabled>user@terminal:~$ </textarea>
+            </div>
+            <div class="modal-btn-group col-md-4 col-xs-12">
+              <div id="gitStash" class="btn btn-primary modal-btn">Git Stash</div>
+              <div id="stashList" class="btn btn-primary modal-btn">Stash List</div>
+              <div id="showStash" class="btn btn-primary modal-btn">Show Stash</div>
+              <div id="gitPop" class="btn btn-primary modal-btn">Git Pop</div>
+              <div id="gitDrop" class="btn btn-primary modal-btn">Git Drop</div>
+            </div>
+          </div>
+          <div class="row modal-body-bottom">
+            <div class="col-md-12">
+              <p><strong>What & Why with Stash / Pop:</strong> To install Git on Linux, run the command shown in a terminal window.</p>
+              <p>Git will install automatically, nothing further is needed for installation.</p>
+
+              <p><strong>Git Stash:</strong> To install Git on MacOSX, run the command shown in a terminal window.</p>
+              <p>If Git is not already installed, you will then be asked if you would like to install git.  Select yes, and git will install onto your system.</p>
+
+              <p><strong>Stash List / Show Stash:</strong> To install Git on MacOSX, run the command shown in a terminal window.</p>
+              <p>If Git is not already installed, you will then be asked if you would like to install git.  Select yes, and git will install onto your system.</p>
+
+              <p><strong>Git Pop:</strong> To install Git on MacOSX, run the command shown in a terminal window.</p>
+              <p>If Git is not already installed, you will then be asked if you would like to install git.  Select yes, and git will install onto your system.</p>
+
+              <p><strong>Git Drop:</strong> To install Git on MacOSX, run the command shown in a terminal window.</p>
+              <p>If Git is not already installed, you will then be asked if you would like to install git.  Select yes, and git will install onto your system.</p>
             </div>
           </div>
         </div>
