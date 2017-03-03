@@ -3,10 +3,10 @@ var typeTimer;
 
 //Function will find and load modal based on the id of the button clicked
 function loadModal() {
-//  clearTerminal;
   var button_id = this.id;
   var modal_id = '#modal-'.concat(button_id.substring(7));
   $(modal_id).modal();
+
   if(modal_id == "modal-diagrams") {
     $("#diagrams-carousel").carousel();
   }
@@ -20,14 +20,14 @@ function generateInstruction() {
   }
 
   switch(this.id) {
-    //  Fall-through modal instructions (sameinstructions run for multiple cases)
+    //  Fall-through modal instructions (same instructions run on multiple cases/modals)
     case "gitAdd":
     case "branchAdd":
       typeText('.terminal-window', 'git add .', 0, 200);
       break;
     case "gitCommit":
     case "branchCommit":
-      typeText('.terminal-window', 'git commit -m "enter commit message"', 0, 200);
+      typeText('.terminal-window', 'git commit -m <commit message>', 0, 200);
       break;
     case "gitPush":
     case "pushMergedBranch":
@@ -44,17 +44,17 @@ function generateInstruction() {
       typeText('.terminal-window', 'git', 0, 200);
       break;
     case "gitConfig":
-      typeText('.terminal-window', 'git config --global user.name "username"', 0, 200, function() {
-        typeText('.terminal-window', 'git config --global user.email "email"', 0, 200);
+      typeText('.terminal-window', 'git config --global user.name <username>', 0, 200, function() {
+        typeText('.terminal-window', 'git config --global user.email <email>', 0, 200);
       });
       break;
     case "checkConfig":
       typeText('.terminal-window', 'git config --list', 0, 200);
       break;
     case "gitClone":
-      typeText('.terminal-window', 'git clone "insert repository url from GitHub"', 0, 200);
+      typeText('.terminal-window', 'git clone <insert repository url from GitHub>', 0, 200);
       break;
-    //  Begin modal-3 instructions - see Multiple Modal Instructions for gitAdd & gitCommit & gitPush
+    //  Begin modal-3 instructions - see Fall-through Modal Instructions for gitAdd & gitCommit & gitPush
     case "gitStatus":
       typeText('.terminal-window', 'git status', 0, 200);
       break;
@@ -63,27 +63,27 @@ function generateInstruction() {
       break;
     //  Begin modal-5 instructions
     case "createBranch":
-      typeText('.terminal-window', 'git branch "branch name"', 0, 200);
+      typeText('.terminal-window', 'git branch <branch name>', 0, 200);
       break;
     case "viewBranches":
       typeText('.terminal-window', 'git branch', 0, 200);
       break;
     case "switchBranch":
-      typeText('.terminal-window', 'git checkout "branch name"', 0, 200);
+      typeText('.terminal-window', 'git checkout <branch name>', 0, 200);
       break;
     case "checkoutNewBranch":
-      typeText('.terminal-window', 'git checkout -b "branch name"', 0, 200);
+      typeText('.terminal-window', 'git checkout -b <branch name>', 0, 200);
       break;
     case "delBranch":
-      typeText('.terminal-window', 'git branch -d "branch name"', 0, 200);
+      typeText('.terminal-window', 'git branch -d <branch name>', 0, 200);
       break;
-    //  Begin modal-6 instructions - see Multiple Modal Instructions for branchAdd & branchCommit & pushMergedBranch
+    //  Begin modal-6 instructions - see Fall-through Modal Instructions for branchAdd & branchCommit & pushMergedBranch
     case "pushBranch":
-      typeText('.terminal-window', 'git push origin "branch name"', 0, 200);
+      typeText('.terminal-window', 'git push origin <branch name>', 0, 200);
       break;
     case "mergeBranch":
       typeText('.terminal-window', 'git checkout master', 0, 200, function() {
-        typeText('.terminal-window', 'git merge "branch name"', 0, 200);
+        typeText('.terminal-window', 'git merge <branch name>', 0, 200);
       });
       break;
     //  Begin modal-8 instructions
@@ -94,15 +94,66 @@ function generateInstruction() {
       typeText('.terminal-window', 'git remote -v', 0, 200);
       break;
     case "setRemote":
-      typeText('.terminal-window', 'git remote add upstream "Original Fork Repository URL"', 0, 200);
+      typeText('.terminal-window', 'git remote add upstream <Original Fork Repository URL>', 0, 200);
       break;
     case "pullFork":
       typeText('.terminal-window', 'git pull upstream master', 0, 200);
       break;
     //  Begin modal-9 instructions
+    case "pullReq":
+      typeText('.terminal-window', 'see instructions for Creating Pull Request', 0, 200);
+      break;
+    case "mergePull":
+      typeText('.terminal-window', 'see instructions for Merging Pull Request', 0, 200);
+      break;
+    case "mergeCon":
+      typeText('.terminal-window', 'git checkout master', 0, 200, function() {
+        typeText('.terminal-window', 'git pull upstream master', 0, 200, function() {
+          typeText('.terminal-window', 'git checkout <branch name>', 0, 200, function() {
+            typeText('.terminal-window', 'git merge master', 0, 200);});});
+      });
+      break;
     //  Begin modal-10 instructions
+    case "gitStash":
+      typeText('.terminal-window', 'git stash', 0, 200);
+      break;
+    case "stashList":
+      typeText('.terminal-window', 'git stash list', 0, 200);
+      break;
+    case "showStash":
+      typeText('.terminal-window', 'git stash show -p <stash@{index}>', 0, 200);
+      break;
+    case "gitPop":
+      typeText('.terminal-window', 'git pop <stash@{index}>', 0, 200);
+      break;
+    case "gitDrop":
+      typeText('.terminal-window', 'git drop <stash@{index}>', 0, 200);
+      break;
     //  Begin modal-11 instructions
+    case "gitAmend":
+      typeText('.terminal-window', 'git commit --amend', 0, 200);
+      break;
+    case "gitUnStage":
+      typeText('.terminal-window', 'git reset HEAD <file>', 0, 200);
+      break;
+    case "gitUnMod":
+      typeText('.terminal-window', 'git checkout -- <file.ext>', 0, 200);
+      break;
+    case "gitReset":
+      typeText('.terminal-window', 'git reset HEAD-x <resetType>', 0, 200);
+      break;
+    case "gitRevert":
+      typeText('.terminal-window', 'git revert HEAD-x', 0, 200);
+      break;
+    case "gitCheckout":
+      typeText('.terminal-window', 'git checkout HEAD-x', 0, 200);
+      break;
     //  Begin modal-12 instructions
+    case "gitLog":
+      typeText('.terminal-window', 'git log <-(x)>', 0, 200);
+      break;
+
+
     default:
       typeText('.terminal-window', 'no instruction found', 0, 200);
   }

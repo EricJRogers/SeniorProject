@@ -44,6 +44,7 @@
                     <li><a id="button-terms" class="panel-btn" href="#">Terminology</a></li>
                     <li><a id="button-diagrams" class="panel-btn" href="#">Diagrams</a></li>
                     <li><a href="https://git-scm.com/book/en/v2" target="_blank">Reference Book</a></li>
+                    <li><a href="https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud" target="_blank">Reference Tutorial</a></li>
                     <li><a id="button-help" class="panel-btn" href="#">Get Help</a></li>
                   </ul>
                 </div>
@@ -170,16 +171,16 @@
                 </div>
                 <div class="panel-col col-md-4 col-xs-12">
                   <div id="button-11" class="panel-btn btn btn-primary btn-block">
-                    <p class="btn-title">Misc Commands</p>
-                    <p class="btn-subTitle">Squashing Commits</p>
-                    <p class="btn-subTitle">Advanced File Manipulations</p>
+                    <p class="btn-title">Rewriting History</p>
+                    <p class="btn-subTitle">Unmodifying Files</p>
+                    <p class="btn-subTitle">Undoing Changes</p>
                   </div>
                 </div>
                 <div class="panel-col col-md-4 col-xs-12">
                   <div id="button-12" class="panel-btn btn btn-primary btn-block">
-                    <p class="btn-title">Merge VS Rebase</p>
-                    <p class="btn-subTitle">What is Rebasing</p>
-                    <p class="btn-subTitle">How do they differ</p>
+                    <p class="btn-title">Misc Commands</p>
+                    <p class="btn-subTitle">Viewing Logs</p>
+                    <p class="btn-subTitle">Merging Vs. Rebasing</p>
                   </div>
                 </div>
               </div>
@@ -601,20 +602,30 @@
           </div>
           <div class="row modal-body-bottom">
             <div class="col-md-12">
-              <p><strong>What & Why with Stash / Pop:</strong> To install Git on Linux, run the command shown in a terminal window.</p>
-              <p>Git will install automatically, nothing further is needed for installation.</p>
+              <p><strong>What & Why with Stash / Pop:</strong></p>
+              <p>Git Stash/Pop is a tool that you can use to temporarily 'stash' or store changes made on a branch.  Say you were doing work on the wrong branch,
+              you just put in and hour or more into a task and then realize you did it all on your Master branch.  If only there was a way you could move your changes
+              over to the branch you intended to do all the work on.  Well thats one thing Stash/Pop allow you to do, you can 'stash' your changes, switch branches, and
+              then 'pop' your changes off the stack onto that branch.  That is just one example as to when this may be handy, but more situations can and will be more
+              easily solved by knowing how to use this simple tool.</p>
 
-              <p><strong>Git Stash:</strong> To install Git on MacOSX, run the command shown in a terminal window.</p>
-              <p>If Git is not already installed, you will then be asked if you would like to install git.  Select yes, and git will install onto your system.</p>
+              <p><strong>Stash:</strong> See command in terminal window</p>
+              <p>Changes are pushed onto a stack, and will stay there until removed from the stack.  Keep in mind it is not a good idea to rely on changes being saved
+              in the stack for long periods of time.</p>
 
-              <p><strong>Stash List / Show Stash:</strong> To install Git on MacOSX, run the command shown in a terminal window.</p>
-              <p>If Git is not already installed, you will then be asked if you would like to install git.  Select yes, and git will install onto your system.</p>
+              <p><strong>Stash List / Show Stash:</strong> See commands in terminal window</p>
+              <p>Stash List is pretty self explanatory, it will list all the stashed commits on the stack.</p>
+              <p>Stash Show will display the details about the specific stashed commit.  If no specific stash is provided, it will show the most recently pushed stash.  The '-p'
+              is also optional, but without it you will see less details about that stashed commit.</p>
 
-              <p><strong>Git Pop:</strong> To install Git on MacOSX, run the command shown in a terminal window.</p>
-              <p>If Git is not already installed, you will then be asked if you would like to install git.  Select yes, and git will install onto your system.</p>
+              <p><strong>Stash Pop / Apply:</strong> See command in terminal window</p>
+              <p>Stash Pop is how you apply stashed commit on the stack onto a current branch.  If no specific stash is provided, it will use the most recently stashed commit.
+              Note that Git Pop will also remove that commit from the stack.</p>
+              <p>Stash Apply is essentially the same as Git Pop, but this command will not automatically remove the stashed commit from the stack.</p>
 
-              <p><strong>Git Drop:</strong> To install Git on MacOSX, run the command shown in a terminal window.</p>
-              <p>If Git is not already installed, you will then be asked if you would like to install git.  Select yes, and git will install onto your system.</p>
+              <p><strong>Stash Drop:</strong> See command in terminal window</p>
+              <p>Stash Drop will remove a stashed commit from the stack.  If not stash is provided it will remove the most recently stashed commit.</p>
+              <p>Stash Clear is also a valid option, but this will remove all stashed commits from the stack.</p>
             </div>
           </div>
         </div>
@@ -628,7 +639,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Extra 2</h4>
+          <h4 class="modal-title">Undoing Changes</h4>
         </div>
         <div class="container modal-body">
           <div class="row modal-body-top">
@@ -637,23 +648,58 @@
               <textarea class="terminal-window" disabled>user@terminal:~$ </textarea>
             </div>
             <div class="modal-btn-group col-md-4 col-xs-12">
-              <div id="gitAdd" class="btn btn-primary modal-btn">Add to Staging Area</div>
-              <div id="gitCommit" class="btn btn-primary modal-btn">Commit to Local Repository</div>
-              <div id="gitPush" class="btn btn-primary modal-btn">Push to Remote Repository</div>
-              <div id="gitStatus" class="btn btn-primary modal-btn">Check File States</div>
-              <div id="gitPull" class="btn btn-primary modal-btn">Pull from Remote Repository</div>
+              <div id="gitAmend" class="btn btn-primary modal-btn">Amend Commit</div>
+              <div id="gitUnStage" class="btn btn-primary modal-btn">Un-Stage File</div>
+              <div id="gitUnMod" class="btn btn-primary modal-btn">Revert Modified File</div>
+              <div id="gitReset" class="btn btn-primary modal-btn">Reset Branch</div>
+              <div id="gitRevert" class="btn btn-primary modal-btn">Revert Branch</div>
+              <div id="gitCheckout" class="btn btn-primary modal-btn">Checkout Commit</div>
             </div>
           </div>
           <div class="row modal-body-bottom">
             <div class="col-md-12">
-              <p><strong>Saving Changes to GitHub:</strong> To install Git on Linux, run the command shown in a terminal window.</p>
-              <p>Git will install automatically, nothing further is needed for installation.</p>
+              <p><strong>Amend Commit:</strong> See command in terminal window</p>
+              <p>Say you do your commit command, but then realize you want to add another file to this commit.  This command allows you to do that.  Simply
+              add the file to the staging area and then run this command.</p>
+              <p>Perhaps you messed up your commit message, and would really like to change it.  If you run this command before pushing up your code, you can
+              re-enter your commit message.</p>
 
-              <p><strong>Checking File States:</strong> To install Git on MacOSX, run the command shown in a terminal window.</p>
-              <p>If Git is not already installed, you will then be asked if you would like to install git.  Select yes, and git will install onto your system.</p>
+              <p><strong>Un-Stage a File:</strong> See command in terminal window</p>
+              <p>This allows you to remove a file from the Staging Area.  Say you accidently added all changed files to your Staging Area, but then realized
+              that there is a file in that list you do not want to save the changes for.  Using this command will allow you to remove that file from your
+              Staging Area and will therefore not be commited.</p>
 
-              <p><strong>Pull code from GitHub:</strong> To install Git on MacOSX, run the command shown in a terminal window.</p>
-              <p>If Git is not already installed, you will then be asked if you would like to install git.  Select yes, and git will install onto your system.</p>
+              <p><strong>Revert Modified File:</strong> See command in terminal window</p>
+              <p>Use git status to see unstaged files.  If there is a file there that you do not want to save the changes for, using this command will revert
+              the file back to its state in the last commit.</p>
+
+              <p><strong>Reset Branch:</strong> This alters commit history</p>
+              <p>This tool is used to move the HEAD to a different commit X.  In otherwords, removing or deleting commits and reseting or
+              rewinding a branch to a previous commit.  Note, HEAD-x refers to where X = commit to rewind to.  If no specific commit is specified to
+              rewind to, it will undo changes on current commit.</p>
+              <p>There are 3 different kinds of branch reset, --soft, --mixed, and --hard.  If none of these are specified, --mixed is the default.  A soft
+              reset, resets the branch on the commit-level, but the staged snapshot and working directory are not altered.  A mixed reset, resets the branch
+              on the staged-level, but the working directory is not altered.  This means that the staged snapshot it made to match the commit you reset the
+              branch to.  A hard reset, resets the branch on the working directory-level.  This means that all three components of the repository are reset
+              back to the specified commit.</p>
+
+              <p><strong>Revert Branch:</strong> This does not alter commit history</p>
+              <p>This tool is used very similarly to Reset.  The main and most important difference is that this tool will no rewrite your commit history or
+              delete commits.  Revert will rewind to the specified commit, and then create a new commit on the end of the branch with that commits snapshot.
+              Note that you should have a clean working directory prior to using this tool.</p>
+
+              <p><strong>Checkout Branch:</strong> Much like switching between Branches, but with Commits</p>
+              <p>This is a great tool to look back at old version of code, all this does is move your HEAD to a certain commit state.  Be careful though, as if
+              you start making changes and commits from here you could end up losing your work.  If you want to get code from a previous commit to work on, you
+              should consider using Revert, Reset, or creating a whole new branch from that commit instead.</p>
+
+              <p><strong>Reset & Checkout on File Level:</strong> These can be applied to individual files also</p>
+              <p>If you add the name of a file at the end of the command, then you will be able to perform a similar action as on commits.  Rather than rewinding/viewing
+              a whole commit, you can rewind/view an individual file instead.</p>
+              <p>Reset on File Level:  The soft, mixed, and hard parameters have no effect when working on the file level.  When you use Reset on a file, it will take
+              the file state from the specified commit and stage it for the next commit.  The working directory will not be updated.</p>
+              <p>Checkout on File Level:  This will revert the file state from the specified commit on the working directory, but will not be staged.  This is commonly
+              used with HEAD and not specified commit in order to revert all chanegs done so far on that file.</p>
             </div>
           </div>
         </div>
@@ -667,7 +713,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Extra 3</h4>
+          <h4 class="modal-title">Misc Commands</h4>
         </div>
         <div class="container modal-body">
           <div class="row modal-body-top">
@@ -676,7 +722,7 @@
               <textarea class="terminal-window" disabled>user@terminal:~$ </textarea>
             </div>
             <div class="modal-btn-group col-md-4 col-xs-12">
-              <div id="gitAdd" class="btn btn-primary modal-btn">Add to Staging Area</div>
+              <div id="gitLog" class="btn btn-primary modal-btn">View Logs</div>
               <div id="gitCommit" class="btn btn-primary modal-btn">Commit to Local Repository</div>
               <div id="gitPush" class="btn btn-primary modal-btn">Push to Remote Repository</div>
               <div id="gitStatus" class="btn btn-primary modal-btn">Check File States</div>
@@ -685,8 +731,10 @@
           </div>
           <div class="row modal-body-bottom">
             <div class="col-md-12">
-              <p><strong>Saving Changes to GitHub:</strong> To install Git on Linux, run the command shown in a terminal window.</p>
-              <p>Git will install automatically, nothing further is needed for installation.</p>
+              <p><strong>Viewing Logs:</strong> Many options for this command can be found in Reference Book</p>
+              <p>It can be very beneficial to see what has happened throughout a projects history.  By default, with no arguments, this command will list all commits in
+              reverse chronological order in the repository.  There are too many options to provide here, but consider adding the -(n) argument, where (n) is the number
+              of commits you would like to see.  This will list most recent (n) commits rather than all of them.</p>
 
               <p><strong>Checking File States:</strong> To install Git on MacOSX, run the command shown in a terminal window.</p>
               <p>If Git is not already installed, you will then be asked if you would like to install git.  Select yes, and git will install onto your system.</p>
