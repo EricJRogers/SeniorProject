@@ -188,8 +188,17 @@ img {
   background-color: black;
 }
 
-.modal-img {
+.workflow-img {
   width: 100%;
+}
+
+.modal-img {
+  width: 40%;
+  height: 35%;
+}
+
+.modal-img-p {
+  text-align: center;
 }
 
 /*  Rules for when screen is xs  */

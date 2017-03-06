@@ -217,7 +217,7 @@
               greatly used in the Software Development industry.  Having prior experience and knowledge of GitHub and how to properly use a variety of
               its features is a marketable skill that could be included on a resume.</p>
             <h4>Basic Git Workflow</h4>
-            <div class="modal-img">
+            <div class="workflow-img">
               <img src="../Assets/Images/BasicGit.png" alt="No Image Found"/>
             </div>
           </div>
@@ -352,7 +352,7 @@
             and commit the fix for the code, without having to worry about pushing up unfinished code from your original task.  Without
             Branches this would not be possible, and could potentially create a lot more problems by being forced to commit untested code.</p>
             <h4>Branches & Git Workflow</h4>
-            <div class="modal-img">
+            <div class="workflow-img">
               <img src="../Assets/Images/git-branch.jpg" alt="No Image Found"/>
             </div>
           </div>
@@ -475,7 +475,7 @@
             the suggested changes.  Only the Project Owner gets to decide if the changes will be merged or not, and this is very important, as you don't
             want just anyone to have the ability to change your project.</p>
             <h4>Git Fork Workflow</h4>
-            <div class="modal-img">
+            <div class="workflow-img">
               <img src="../Assets/Images/ForkWorkFlow.png" alt="No Image Found"/>
             </div>
           </div>
@@ -688,7 +688,7 @@
               delete commits.  Revert will rewind to the specified commit, and then create a new commit on the end of the branch with that commits snapshot.
               Note that you should have a clean working directory prior to using this tool.</p>
 
-              <p><strong>Checkout Branch:</strong> Much like switching between Branches, but with Commits</p>
+              <p><strong>Checkout Commit:</strong> Much like switching between Branches, but with Commits</p>
               <p>This is a great tool to look back at old version of code, all this does is move your HEAD to a certain commit state.  Be careful though, as if
               you start making changes and commits from here you could end up losing your work.  If you want to get code from a previous commit to work on, you
               should consider using Revert, Reset, or creating a whole new branch from that commit instead.</p>
@@ -723,10 +723,8 @@
             </div>
             <div class="modal-btn-group col-md-4 col-xs-12">
               <div id="gitLog" class="btn btn-primary modal-btn">View Logs</div>
-              <div id="gitCommit" class="btn btn-primary modal-btn">Commit to Local Repository</div>
-              <div id="gitPush" class="btn btn-primary modal-btn">Push to Remote Repository</div>
-              <div id="gitStatus" class="btn btn-primary modal-btn">Check File States</div>
-              <div id="gitPull" class="btn btn-primary modal-btn">Pull from Remote Repository</div>
+              <div id="gitMerge" class="btn btn-primary modal-btn">Git Merge</div>
+              <div id="gitRebase" class="btn btn-primary modal-btn">Git Rebase</div>
             </div>
           </div>
           <div class="row modal-body-bottom">
@@ -736,11 +734,20 @@
               reverse chronological order in the repository.  There are too many options to provide here, but consider adding the -(n) argument, where (n) is the number
               of commits you would like to see.  This will list most recent (n) commits rather than all of them.  Press Q to exit.</p>
 
-              <p><strong>Checking File States:</strong> To install Git on MacOSX, run the command shown in a terminal window.</p>
-              <p>If Git is not already installed, you will then be asked if you would like to install git.  Select yes, and git will install onto your system.</p>
+              <p><strong>Git Rebase VS Git Merge:</strong> Both are used to integrate changes of two branches together, but differently</p>
+              <p>Git Merge will take the version of code on your Master branch, and merge it to the end of your feature branch.  This avoids the posibility of re-writing
+              public commits, but can provide a messy project history by saving all commits.</p>
+              <p>Git Rebase will take your Master branch, and merge your feature branch onto the end of it.  This keeps a nice linear project history, but if done
+              improperly can result in re-writing public commits.
+              </p>
 
-              <p><strong>Pull code from GitHub:</strong> To install Git on MacOSX, run the command shown in a terminal window.</p>
-              <p>If Git is not already installed, you will then be asked if you would like to install git.  Select yes, and git will install onto your system.</p>
+              <p class="modal-img-p">
+                <img class="modal-img" src="../Assets/Images/gitMerge.png" alt="Git Merge Image">
+                <img class="modal-img" src="../Assets/Images/gitRebase.png" alt="Git Rebase Image">
+              </p>
+
+              <p><strong>Note:</strong></p>
+              <p>This is a general overview --Merging VS Rebasing can be complicated, and should be looked into further before using with important projects.</p>
             </div>
           </div>
         </div>
