@@ -40,12 +40,13 @@
                   <ul class="nav nav-pills nav-stacked">
                     <li><a href="https://github.com/" target="_blank">GitHub</a></li>
                     <li><a href="https://sso.mcla.edu/" target="_blank">MCLA Portal</a></li>
+              <!---<li><a href="https://www.mcla.edu/Academics/undergraduate/computerscience/index" target="_blank">MCLA Computer Science</a></li>
                     <li><a id="button-index" class="panel-btn" href="#">Index Page</a></li>
                     <li><a id="button-terms" class="panel-btn" href="#">Terminology</a></li>
-                    <li><a id="button-diagrams" class="panel-btn" href="#">Diagrams</a></li>
+                    <li><a id="button-diagrams" class="panel-btn" href="#">Diagrams</a></li>--->
                     <li><a href="https://git-scm.com/book/en/v2" target="_blank">Reference Book</a></li>
                     <li><a href="https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud" target="_blank">Reference Tutorial</a></li>
-                    <li><a id="button-help" class="panel-btn" href="#">Get Help</a></li>
+                    <li><a href="http://www.mcla.edu/Academics/undergraduate/computerscience/faculty/index" target="_blank">Get Help</a></li>
                   </ul>
                 </div>
               </div>
@@ -74,7 +75,7 @@
                   <div id="button-2" class="panel-btn btn btn-primary btn-block">
                     <p class="btn-title">Getting Started</p>
                     <p class="btn-subTitle">Setup Git on Windows, Linux, MacOSX</p>
-                    <p class="btn-subTitle">Clone A Git Repository</p>
+                    <p class="btn-subTitle">Create/Clone A Git Repository</p>
                   </div>
                 </div>
                 <div class="panel-col col-md-4 col-xs-12">
@@ -268,6 +269,10 @@
               terminal window, and you will be all set and ready to go.  If you would like to use a different identity from your global configuration you can run
               the same commands without the "--global" tag in which ever project you are in.  This will not overwrite your global settings unless you include
               the "--global" tag.</p>
+
+              <p><strong>Create a Repository:</strong>  Creating a Repository is done on the GitHub website.</p>
+              <p>To get your GitHub Repository URL, simply log into GitHub and click on the repository you would like to clone.  On that page you will find
+              a green button that reads "Clone or Download", click that button and copy the URL displayed.</p>
 
               <p><strong>Clone a Repository:</strong>  Once you have your GitHub Repository URL, run the command shown in the terminal window.</p>
               <p>To get your GitHub Repository URL, simply log into GitHub and click on the repository you would like to clone.  On that page you will find
@@ -757,20 +762,95 @@
       </div>
     </div>
 
-    <div id="modal-index" class="modal fade">
+<!---    <div id="modal-index" class="modal fade">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Index</h4>
+          <h4 class="modal-title">Misc Commands</h4>
         </div>
-        <div class="modal-body">
-          <p>Some text in the modal.</p>
+        <div class="container modal-body">
+          <div class="row modal-body-top-index">
+            <div class="col-md-6 col-xs-12">
+              <dl class="dl-horizontal">
+                <dt>Understanding GitHub</dt>
+                  <dd>What is GitHub?</dd>
+                  <dd>Why is GitHub Important?</dd>
+                  <dd>Git Workflow</dd>
+                <dt>Get Started</dt>
+                  <dd>Installing Git</dd>
+                  <dd>Configuring GitHub</dd>
+                  <dd>Clone GitHub Repository</dd>
+                <dt>Basic GitHub</dt>
+                  <dd>Add to Staging Area</dd>
+                  <dd>Commit to Local Repository</dd>
+                  <dd>Push to Remote Repository</dd>
+                  <dd>Check File States</dd>
+                  <dd>Pull from Remote Repository</dd>
+              </dl>
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <dl class="dl-horizontal">
+                <dt>Learning Branches</dt>
+                  <dd>What is a Branch?</dd>
+                  <dd>Why Are Branches Important?</dd>
+                  <dd>Branches & Git Workflow</dd>
+                <dt>Get Started with Branches</dt>
+                  <dd>Create a Branch</dd>
+                  <dd>View Branches</dd>
+                  <dd>Switch Branch</dd>
+                  <dd>Delete Branch</dd>
+                <dt>Intermediate GitHub</dt>
+                  <dd>Add, Commit, and Push with Branches</dd>
+                  <dd>Merge Branch</dd>
+                  <dd>Branch Merge Conflicts</dd>
+              </dl>
+            </div>
+          </div>
+          <div class="row modal-body-bottom-index">
+            <div class="col-md-6 col-xs-12">
+              <dl class="dl-horizontal">
+                <dt>Understanding Forks</dt>
+                  <dd>What is a Fork?</dd>
+                  <dd>Why are Forks Important?</dd>
+                  <dd>Forks & Git Workflow</dd>
+                <dt>Get Started with Forks</dt>
+                  <dd>Create Fork</dd>
+                  <dd>Configure Fork Upstream</dd>
+                  <dd>Pull Fork Upstream</dd>
+                <dt>Advanced GitHub</dt>
+                  <dd>Create Pull Request</dd>
+                  <dd>Merge Pull Request</dd>
+                  <dd>Fork Merge Conflicts</dd>
+              </dl>
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <dl class="dl-horizontal">
+                <dt>Git Stash/Pop</dt>
+                  <dd>Git Stash</dd>
+                  <dd>Stash List</dd>
+                  <dd>Show Stash</dd>
+                  <dd>Git Pop</dd>
+                  <dd>Git Drop</dd>
+                <dt>Rewriting History</dt>
+                  <dd>Amend Commit</dd>
+                  <dd>Un-stage File</dd>
+                  <dd>Revert Modified File</dd>
+                  <dd>Reset Branch</dd>
+                  <dd>Revert Branch</dd>
+                  <dd>Checkout Commit</dd>
+                <dt>Misc Commands</dt>
+                  <dd>View Logs</dd>
+                  <dd>Git Merge</dd>
+                  <dd>Git Rebase</dd>
+              </dl>
+            </div>
+          </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
-    </div>
+    </div>   --->
 
     <div id="modal-terms" class="modal fade">
       <div class="modal-content">

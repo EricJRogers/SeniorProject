@@ -108,7 +108,6 @@ img {
   height: 50%;
   padding: 0px 0px 17.5px 0px;
   margin: 0px 0px 0px 0px;
-
 }
 
 .terminal {
@@ -163,6 +162,21 @@ img {
 
 .mergeConflictExample {
   padding: 0px 0px 0px 100px;
+}
+
+#modal-index {
+  overflow: auto;
+}
+.index-modal {
+  width: 100%;
+}
+
+.modal-body-top-index {
+  height: 50%;
+}
+
+.modal-body-bottom-index {
+  height: 50%;
 }
 
 /*  Carousel CSS  */
