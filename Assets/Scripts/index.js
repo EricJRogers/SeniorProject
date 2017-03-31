@@ -6,10 +6,6 @@ function loadModal() {
   var button_id = this.id;
   var modal_id = '#modal-'.concat(button_id.substring(7));
   $(modal_id).modal();
-
-  if(modal_id == "modal-diagrams") {
-    $("#diagrams-carousel").carousel();
-  }
 }
 
 //Function displays proper instructions to modal terminal display based on id of modal-btn clicked
@@ -186,6 +182,24 @@ function clearTerminal() {
   $('.terminal-window').append('user@terminal:~$ ');
 }
 
+//Function will display proper Image in Modal
+function loadImgModal() {
+  var anchor_id = this.id;
+  var img = document.getElementById('variable-modal-img');
+  img.src = "../Assets/Images/".concat(anchor_id + ".png");
+  img.alt = anchor_id;
+  var modal = $('#modal-display-image');
+  modal.modal();
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsById("modal-display-image-close")[0];
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+}
+
 //Functions listening once document is loaded
 function init() {
   //Button clicked will Load Modal
@@ -194,6 +208,8 @@ function init() {
   $('.modal-btn').click(generateInstruction);
   //Will clear terminal window when modal becomes hidden
   $('.modal').on('hidden.bs.modal', clearTerminal);
+  //Anchor clicked will Load Image Modal
+  $('.trigger-img-modal').click(loadImgModal);
 }
 
 $(document).ready(init);

@@ -40,10 +40,7 @@
                   <ul class="nav nav-pills nav-stacked">
                     <li><a href="https://github.com/" target="_blank">GitHub</a></li>
                     <li><a href="https://sso.mcla.edu/" target="_blank">MCLA Portal</a></li>
-              <!---<li><a href="https://www.mcla.edu/Academics/undergraduate/computerscience/index" target="_blank">MCLA Computer Science</a></li>
-                    <li><a id="button-index" class="panel-btn" href="#">Index Page</a></li>
-                    <li><a id="button-terms" class="panel-btn" href="#">Terminology</a></li>
-                    <li><a id="button-diagrams" class="panel-btn" href="#">Diagrams</a></li>--->
+                    <li><a href="https://www.mcla.edu/Academics/undergraduate/computerscience/index" target="_blank">MCLA Computer Science</a></li>
                     <li><a href="https://git-scm.com/book/en/v2" target="_blank">Reference Book</a></li>
                     <li><a href="https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud" target="_blank">Reference Tutorial</a></li>
                     <li><a href="http://www.mcla.edu/Academics/undergraduate/computerscience/faculty/index" target="_blank">Get Help</a></li>
@@ -262,7 +259,7 @@
               <p>Git will install automatically, nothing further is needed for installation.</p>
 
               <p><strong>MacOSX:</strong> To install Git on MacOSX, run the command shown in a terminal window.</p>
-              <p>If Git is not already installed, you will then be asked if you would like to install git.  Select yes, and git will install onto your system.</p>
+              <p>If Git is not already installed, you will then be asked if you would like to install Git.  Select yes, and Git will install onto your system.</p>
 
               <p><strong>Configuration:</strong>  Once you have Git installed, the first thing you should do is configure it to your identity.</p>
               <p>Every Git commit you make uses this information, so it is important that you set this up.  Simply run the commands shown in the
@@ -270,13 +267,13 @@
               the same commands without the "--global" tag in which ever project you are in.  This will not overwrite your global settings unless you include
               the "--global" tag.</p>
 
-              <p><strong>Create a Repository:</strong>  Creating a Repository is done on the GitHub website.</p>
-              <p>To get your GitHub Repository URL, simply log into GitHub and click on the repository you would like to clone.  On that page you will find
-              a green button that reads "Clone or Download", click that button and copy the URL displayed.</p>
+              <p><strong>Create a Repository:</strong>  Creating a Repository is done on the GitHub website, <a href="#" class="trigger-img-modal" id="create-repo">see here!</a></p>
+              <p>To Create a Repository, first you must login to GitHub.  Once you are on your home page, there will be a green button in the right margin that
+              says "New Repository".  From there, fill in the Repository name and/or description and proceed to click the "Create Repository" button at the bottom.</p>
 
               <p><strong>Clone a Repository:</strong>  Once you have your GitHub Repository URL, run the command shown in the terminal window.</p>
-              <p>To get your GitHub Repository URL, simply log into GitHub and click on the repository you would like to clone.  On that page you will find
-              a green button that reads "Clone or Download", click that button and copy the URL displayed.</p>
+              <p>To get your GitHub Repository URL, simply login to GitHub and click on the repository you would like to clone.  Your Repositories will be displayed
+              on your home page. On that page you will find a green button that reads "Clone or Download", click that button and copy the URL displayed.</p>
             </div>
           </div>
         </div>
@@ -516,6 +513,10 @@
               <p>Locate the project repository you would like to contribute to, click the Fork button in the upper right side of the screen.
               This creates your Forked Repository, now all that is left to do is to clone that repository and you're good to go.</p>
 
+              <p class="modal-img-p">
+                <img class="modal-img" src="../Assets/Images/createFork.png" alt="Git Create Fork Image">
+              </p>
+
               <p><strong>Check Fork Upstream:</strong> By Default you will have to set this up.</p>
               <p>After you set up your Fork Upstream, you can run this again to ensure it is set up correctly.</p>
 
@@ -565,6 +566,10 @@
               simply click Create Pull Request again and you are done.</p>
               <p>After the Pull Request is submitted, people may make comments on a few changes they would like to see.  In this case you can make the changes to
               the branch you submitted and just re-push it up to your Forked Repository, the Pull Request will automatically reflect those changes made.</p>
+
+              <p class="modal-img-p">
+                <img class="modal-img" src="../Assets/Images/pullRequest.jpg" alt="Make Pull Request Image">
+              </p>
 
               <p><strong>Merging Pull Request:</strong> This can only be done by the Project Owner, or those authorized to do so.</p>
               <p>This also is done on the GitHub website, once the code has been reviewed and approved, there is a merge button at the bottom of the Pull Request
@@ -734,7 +739,7 @@
           </div>
           <div class="row modal-body-bottom">
             <div class="col-md-12">
-              <p><strong>Viewing Logs:</strong> Many options for this command can be found in Reference Book</p>
+              <p><strong>Viewing Logs:</strong> Many options for this command can be found in the Reference Book</p>
               <p>It can be very beneficial to see what has happened throughout a projects history.  By default, with no arguments, this command will list all commits in
               reverse chronological order in the repository.  There are too many options to provide here, but consider adding the -(n) argument, where (n) is the number
               of commits you would like to see.  This will list most recent (n) commits rather than all of them.  Press Q to exit.</p>
@@ -762,151 +767,6 @@
       </div>
     </div>
 
-<!---    <div id="modal-index" class="modal fade">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Misc Commands</h4>
-        </div>
-        <div class="container modal-body">
-          <div class="row modal-body-top-index">
-            <div class="col-md-6 col-xs-12">
-              <dl class="dl-horizontal">
-                <dt>Understanding GitHub</dt>
-                  <dd>What is GitHub?</dd>
-                  <dd>Why is GitHub Important?</dd>
-                  <dd>Git Workflow</dd>
-                <dt>Get Started</dt>
-                  <dd>Installing Git</dd>
-                  <dd>Configuring GitHub</dd>
-                  <dd>Clone GitHub Repository</dd>
-                <dt>Basic GitHub</dt>
-                  <dd>Add to Staging Area</dd>
-                  <dd>Commit to Local Repository</dd>
-                  <dd>Push to Remote Repository</dd>
-                  <dd>Check File States</dd>
-                  <dd>Pull from Remote Repository</dd>
-              </dl>
-            </div>
-            <div class="col-md-6 col-xs-12">
-              <dl class="dl-horizontal">
-                <dt>Learning Branches</dt>
-                  <dd>What is a Branch?</dd>
-                  <dd>Why Are Branches Important?</dd>
-                  <dd>Branches & Git Workflow</dd>
-                <dt>Get Started with Branches</dt>
-                  <dd>Create a Branch</dd>
-                  <dd>View Branches</dd>
-                  <dd>Switch Branch</dd>
-                  <dd>Delete Branch</dd>
-                <dt>Intermediate GitHub</dt>
-                  <dd>Add, Commit, and Push with Branches</dd>
-                  <dd>Merge Branch</dd>
-                  <dd>Branch Merge Conflicts</dd>
-              </dl>
-            </div>
-          </div>
-          <div class="row modal-body-bottom-index">
-            <div class="col-md-6 col-xs-12">
-              <dl class="dl-horizontal">
-                <dt>Understanding Forks</dt>
-                  <dd>What is a Fork?</dd>
-                  <dd>Why are Forks Important?</dd>
-                  <dd>Forks & Git Workflow</dd>
-                <dt>Get Started with Forks</dt>
-                  <dd>Create Fork</dd>
-                  <dd>Configure Fork Upstream</dd>
-                  <dd>Pull Fork Upstream</dd>
-                <dt>Advanced GitHub</dt>
-                  <dd>Create Pull Request</dd>
-                  <dd>Merge Pull Request</dd>
-                  <dd>Fork Merge Conflicts</dd>
-              </dl>
-            </div>
-            <div class="col-md-6 col-xs-12">
-              <dl class="dl-horizontal">
-                <dt>Git Stash/Pop</dt>
-                  <dd>Git Stash</dd>
-                  <dd>Stash List</dd>
-                  <dd>Show Stash</dd>
-                  <dd>Git Pop</dd>
-                  <dd>Git Drop</dd>
-                <dt>Rewriting History</dt>
-                  <dd>Amend Commit</dd>
-                  <dd>Un-stage File</dd>
-                  <dd>Revert Modified File</dd>
-                  <dd>Reset Branch</dd>
-                  <dd>Revert Branch</dd>
-                  <dd>Checkout Commit</dd>
-                <dt>Misc Commands</dt>
-                  <dd>View Logs</dd>
-                  <dd>Git Merge</dd>
-                  <dd>Git Rebase</dd>
-              </dl>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>   --->
-
-    <div id="modal-terms" class="modal fade">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Index</h4>
-        </div>
-        <div class="modal-body">
-          <p>Some text in the modal.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-
-    <div id="modal-diagrams" class="modal fade">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Diagrams</h4>
-        </div>
-        <div class="modal-body">
-          <div id="diagrams-carousel" class="carousel slide" data-interval="false">
-            <ol class="carousel-indicators">
-              <li data-target="#diagrams-carousel" data-slide-to="0" class="active"></li>
-              <li data-target="#diagrams-carousel" data-slide-to="1"></li>
-              <li data-target="#diagrams-carousel" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-              <div class="item active">
-                <img class="img-responsive center-block" src="../Assets/Images/areas.png" alt="First slide">
-              </div>
-              <div class="item">
-                <img class="img-responsive center-block" src="../Assets/Images/BasicGit.png" alt="Second slide">
-              </div>
-              <div class="item">
-                <img class="img-responsive center-block" src="../Assets/Images/github1.png" alt="Third slide">
-              </div>
-            </div>
-            <a class="left carousel-control" href="#diagrams-carousel" role="button" data-slide="prev">
-              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#diagrams-carousel" role="button" data-slide="next">
-              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-
     <div id="modal-help" class="modal fade">
       <div class="modal-content">
         <div class="modal-header">
@@ -920,6 +780,11 @@
           <button type="button" class="btn btn-primary btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
+    </div>
+
+    <div id="modal-display-image" class="modal fade">
+      <button id="modal-display-image-close" type="button" class="close" data-dismiss="modal">&times;</button>
+      <img id="variable-modal-img" class="modal-content image-modal-content">
     </div>
     <!-- END MODAL HTML -->
     <!-- BEGIN FOOTER HTML -->

@@ -89,6 +89,9 @@ img {
 }
 
 /*  Modal CSS  */
+.modal-open {
+  padding-right: 0px !important;
+}
 .modal-content {
   left: 50%; top: 50%;
   transform: translate(-50%, -50%);
@@ -179,29 +182,7 @@ img {
   height: 50%;
 }
 
-/*  Carousel CSS  */
-.carousel-inner {
-  margin-bottom: 10px;
-}
-
-#diagrams-carousel, .carousel-inner, .item {
-  height: 95%;
-  width: 100%;
-}
-
-.carousel-indicators {
-  bottom: -20px;
-}
-
-.carousel-indicators li {
-    display: inline-block;
-    background-color: white;
-    box-shadow: inset 1px 1px 1px 1px black;
-}
-.carousel-indicators .active {
-  background-color: black;
-}
-
+/*  Images display in basic Modal  */
 .workflow-img {
   width: 100%;
 }
@@ -209,6 +190,24 @@ img {
 .modal-img {
   width: 40%;
   height: 35%;
+}
+
+/*  Image Modals CSS  */
+#modal-display-image-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#modal-display-image-close:hover,
+#modal-display-image-close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .modal-img-p {
