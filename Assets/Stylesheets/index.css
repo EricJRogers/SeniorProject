@@ -194,13 +194,13 @@ img {
   height: 35%;
 }
 
-/*  Image Modals CSS  */
+/*  Image Modal CSS  */
 #modal-display-image-close {
     position: absolute;
     top: 15px;
     right: 35px;
     color: #f1f1f1;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: bold;
     transition: 0.3s;
 }
