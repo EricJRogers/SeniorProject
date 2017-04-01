@@ -98,10 +98,10 @@ function generateInstruction() {
       break;
     //  Begin modal-9 instructions
     case "pullReq":
-      typeText('.terminal-window', 'see instructions for Creating Pull Request', 0, 200);
+      typeText('.terminal-window', 'see instructions below to Create Pull Request', 0, 200);
       break;
     case "mergePull":
-      typeText('.terminal-window', 'see instructions for Merging Pull Request', 0, 200);
+      typeText('.terminal-window', 'see instructions below for Merging Pull Request', 0, 200);
       break;
     case "mergeCon":
       typeText('.terminal-window', 'git checkout master', 0, 200, function() {

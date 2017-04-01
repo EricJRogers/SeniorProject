@@ -216,7 +216,7 @@
               its features is a marketable skill that could be included on a resume.</p>
             <h4>Basic Git Workflow</h4>
             <div class="workflow-img">
-              <img src="../Assets/Images/BasicGit.png" alt="No Image Found"/>
+              <img src="../Assets/Images/git-basic.png" alt="No Image Found"/>
             </div>
           </div>
         </div>
@@ -241,7 +241,7 @@
             <div class="modal-btn-group col-md-4 col-xs-12">
               <div id="gitWin" class="btn btn-primary modal-btn">Install Git (Windows)</div>
               <div id="gitLin" class="btn btn-primary modal-btn">Install Git (Linux)</div>
-              <div id="gitOSX" class="btn btn-primary modal-btn">Install Git (MacOS)</div>
+              <div id="gitOSX" class="btn btn-primary modal-btn">Install Git (MacOSX)</div>
               <div id="gitConfig" class="btn btn-primary modal-btn">Configure GitHub</div>
               <div id="checkConfig" class="btn btn-primary modal-btn">Check GitHub Configuration</div>
               <div id="gitClone" class="btn btn-primary modal-btn">Clone GitHub Repository</div>
@@ -249,34 +249,33 @@
           </div>
           <div class="row modal-body-bottom">
             <div class="col-md-12">
-              <p><strong>Windows:</strong> To install Git for Windows <a href="https://git-scm.com/download/win" target="_blank">Click Here</a>.</p>
+              <p><strong>Windows:</strong> <a href="https://git-scm.com/download/win" target="_blank">Click Here</a> to install Git for Windows.</p>
               <p>Follow the setup to finish the installation with the pre-selected settings.  Once the install is complete, you will be able to find Git in your programs and
               either launch it with the Git Bash, or Git CMD (this uses Windows Command Prompt).  Either option you choose will use the same Git commands used in this tutorial.  You will
               notice there is an option for Git GUI, this is a nice tool but it is very important to understand how to use Git without the GUI before deciding to use this tool.  This is
               important so you will know how to use Git even when you do not have access to Git GUI.</p>
 
-              <p><strong>Linux:</strong> To install Git on Linux, run the command shown in a terminal window.</p>
-              <p>Git will install automatically, nothing further is needed for installation.</p>
+              <p><strong>Linux:</strong>  This command will install Git, nothing further is needed for installation.</p>
 
-              <p><strong>MacOSX:</strong> To install Git on MacOSX, run the command shown in a terminal window.</p>
-              <p>If Git is not already installed, you will then be asked if you would like to install Git.  Select yes, and Git will install onto your system.</p>
+              <p><strong>MacOSX:</strong>  This command will install Git, nothing further is needed for installation.</p>
+              <p>If Git is not already installed, this command will ask if you would like to install Git.  Select yes, and Git will install onto your system.  If Git is
+              already installed, it will show the current version of Git that is installed on your system.</p>
 
-              <p><strong>Configuration:</strong>  Once you have Git installed, the first thing you should do is configure it to your identity.</p>
-              <p>Every Git commit you make uses this information, so it is important that you set this up.  Simply run the commands shown in the
-              terminal window, and you will be all set and ready to go.  If you would like to use a different identity from your global configuration you can run
-              the same commands without the "--global" tag in which ever project you are in.  This will not overwrite your global settings unless you include
-              the "--global" tag.</p>
+              <p><strong>Configuration:</strong>  The first thing you should do after installing Git is configuring it to your identity.</p>
+              <p>Every Git commit you make uses this information, so it is important that you set this up.  If you would like to use a different identity from your
+              global configuration, you can run the same commands without the "--global" tag while in a specific Git Repository.  This will not overwrite your global
+              settings unless you include the "--global" tag.</p>
 
               <p><strong>Create a Repository:</strong>  Creating a Repository is done on the GitHub website.</p>
               <p>To Create a Repository, first you must login to GitHub.  Once you are on your home page, there will be a green button in the right margin that
-              says "New Repository".  <a href="#" class="trigger-img-modal" id="new-repo">Click here</a> for image!  From there, fill in the Repository name
-              and/or description and proceed to click the "Create Repository" button at the bottom.  <a href="#" class="trigger-img-modal" id="create-repo">Click here</a>
-              for image!</p>
+              says <a href="#" class="trigger-img-modal" id="new-repo">"New Repository"</a>.  From there, fill in the Repository name and description, then proceed
+              to click the <a href="#" class="trigger-img-modal" id="create-repo">"Create Repository"</a> button at the bottom.</p>
 
-              <p><strong>Clone a Repository:</strong>  Get your GitHub Repository URL, then run the command shown in the terminal window.</p>
-              <p>To get your GitHub Repository URL, simply login to GitHub and click on the repository you would like to clone.  Your Repositories will be displayed
-              on your home page, <a href="#" class="trigger-img-modal" id="repo-list">click here</a> to see image!  On that page you will find a green button that
-              reads "Clone or Download", click that button and copy the URL displayed.<a href="#" class="trigger-img-modal" id="get-repo-url">  Click here!</a> to see image!</p>
+              <p><strong>Clone a Repository:</strong>  Get your GitHub Repository URL from the GitHub website.</p>
+              <p>To get your GitHub Repository URL, login to GitHub and click on the Repository you would like to clone.  Your Repositories will be displayed
+              on your <a href="#" class="trigger-img-modal" id="repo-list">home page</a>.  On that page you will find a green button that reads
+              <a href="#" class="trigger-img-modal" id="get-repo-url">"Clone or Download"</a>, click that button and copy the URL displayed.  Use the URL with the command
+              to clone your Git Repository, it will clone the Repository to the directory you are currently in when running the command.</p>
             </div>
           </div>
         </div>
@@ -314,18 +313,18 @@
               more than one file at a time by separating the file names by a space.</p>
 
               <p><strong>Commit to Local Repository:</strong> It is suggested to add a commit message reflecting the changes made.</p>
-              <p>This will update your Local Repository with all the changes added to the Staging Area</p>
+              <p>This will update your Local Repository with all the changes added to the Staging Area.</p>
 
               <p><strong>Push to Remote Repository:</strong> You will be prompted to enter your Git Email and Password.</p>
               <p>This will push all the changes in your Local Repository to your Remote Repository, updating your files on GitHub.</p>
 
               <p><strong>Check File States:</strong> There are multiple status commands that may provide greater detail if desired, look at the provided Reference Book.</p>
               <p>The basic status command is provided, this will display information regarding what files have been changed and what state the files are currently in.  The state of
-              the files reference whether or not they have been staged, commited, or pushed.  If all changes have been pushed to your Remote Repository then not files will be displayed
+              the files reference whether or not they have been staged, commited, or pushed.  If all changes have been pushed to your Remote Repository then no files will be displayed
               as everything is currently up to date.</p>
 
               <p><strong>Pull from Remote Repository:</strong> Be sure to Pull from your Remote Repository before beginning any new work on your project.</p>
-              <p>This will Pull the current state of your project down from your Remote Repository to your Local Repository.</p>
+              <p>This will Pull the current state of your project down from your Remote Repository on GitHub to your Local Repository.</p>
             </div>
           </div>
         </div>
@@ -349,6 +348,7 @@
             to as the 'HEAD'.  This is a special pointer that points to the Branch you are currently on, and allows you to create and
             switch between multiple Branches.  These Branches are stored on your Local Repository, and can be merged and pushed up to
             GitHub once tasks are completed.</p>
+
             <h4>Why Are Branches Important?</h4>
             <p>By default you are provided with a Branch labeled 'master',but you can also make your own.  When you make a Branch,
             it creates a new pointer with the name you provide and allows you to edit code on that Branch separately from your master
@@ -356,9 +356,10 @@
             are working on a task, but get informed that something is broken and you need to fix it ASAP.  You can create a new Branch
             and commit the fix for the code, without having to worry about pushing up unfinished code from your original task.  Without
             Branches this would not be possible, and could potentially create a lot more problems by being forced to commit untested code.</p>
+
             <h4>Branches & Git Workflow</h4>
             <div class="workflow-img">
-              <img src="../Assets/Images/git-branch.jpg" alt="No Image Found"/>
+              <img src="../Assets/Images/git-branch.png" alt="No Image Found"/>
             </div>
           </div>
         </div>
@@ -395,11 +396,12 @@
               use the shortcut command that will do both at the same time.  Branch names should reflect the task you are working on with that branch, common
               practice in industry is using the assigned task ID.</p>
 
-              <p><strong>Viewing Branches:</strong></p>
+              <p><strong>Viewing Branches:</strong>  You can also go to your <a href="#" class="trigger-img-modal" id="github-view-branches-menu">Repository</a> to
+              view <a href="#" class="trigger-img-modal" id="github-view-branches">branches</a>.</p>
               <p>It is always helpful to view your branches, especially if you are working on multiple tasks on different branches.  The branch your HEAD is currently
               pointing too will have an asterisk and be a different color.</p>
 
-              <p><strong>Deleting a Branch:</strong></p>
+              <p><strong>Deleting a Branch:</strong>  Run the command shown in the terminal window.</p>
               <p>You should know how to delete a branch whether you made a spelling mistake on the branch name, or simply want to clear out branches that are no longer needed.
               One thing to keep in mind is that you cannot delete the branch that your HEAD is currently pointing to.</p>
             </div>
@@ -433,15 +435,17 @@
           </div>
           <div class="row modal-body-bottom">
             <div class="col-md-12">
-              <p><strong>Push Branch to Remote Repository: </strong>This will push your Branch directly to GitHub.</p>
+              <p><strong>Push Branch to Remote Repository: </strong>First you must Stage and Commit your changes.</p>
               <p>This is one way to commit changes in your Branch to GitHub and to merge it into Master.  When you use this command, you will then have to visit GitHub and submit
               a Pull Request to merge your Branch into Master.  Here people in the group can review and make suggestions to your code, and then the code can be merged to the Master.</p>
 
               <p><strong>Merge Branch to Master: </strong> This will merge changes made on specified Branch to the Master Branch.</p>
               <p>First you need to be sure to switch to your Master Branch, and then merge 'Branch Name'.  Git will automatically merge your Branch onto the Master Branch as long
-              as there are not merge conflicts.</p>
+              as there are no merge conflicts.</p>
+
               <p><strong>Push Master after Merge:</strong> This is done the same as a normal Push.</p>
               <p>After you have merged your Branch onto the Master Branch succesfully, all that is left is to Push your Master up to GitHub.</p>
+
               <p><strong>Merge Conflict: </strong>Merge conflicts happen, especially if multiple people are working on the same project.</p>
               <p>A merge conflict occurs when you try to merge two branches that changed the same lines of code.  When there is a merge conflict, it will show in the terminal what
               file(s) it is in.  From there look for these identifiers as shown below.  This shows which two versions of changes are conflicting with each other.  To fix this,
@@ -473,15 +477,17 @@
             <h4>What is a Fork?</h4>
             <p>A Fork is a copied repository of an existing project.  By Forking this project, you create your own personal copy
             of that project which allows you to make changes to it without effecting the original project.</p>
+
             <h4>Why are Forks Important?</h4>
             <p>Forks are commonly used on bigger projects that have multiple developers that contribute to it.  Anyone can create a Fork from a public
             repository, but only the Project Owner can write to it.  Anyone who makes changes on a Fork, must submit those changes via a Pull
             Request in order for their code to get merged into the original project.  This allows the Project Owner and/or other developers to analyze
             the suggested changes.  Only the Project Owner gets to decide if the changes will be merged or not, and this is very important, as you don't
             want just anyone to have the ability to change your project.</p>
+
             <h4>Git Fork Workflow</h4>
             <div class="workflow-img">
-              <img src="../Assets/Images/ForkWorkFlow.png" alt="No Image Found"/>
+              <img src="../Assets/Images/fork-workflow.png" alt="No Image Found"/>
             </div>
           </div>
         </div>
@@ -505,29 +511,27 @@
             </div>
             <div class="modal-btn-group col-md-4 col-xs-12">
               <div id="createFork" class="btn btn-primary modal-btn">Creating a Fork</div>
-              <div id="checkRemote" class="btn btn-primary modal-btn">Check Fork Upstream</div>
               <div id="setRemote" class="btn btn-primary modal-btn">Configure Fork Upstream</div>
+              <div id="checkRemote" class="btn btn-primary modal-btn">Check Fork Upstream</div>
               <div id="pullFork" class="btn btn-primary modal-btn">Pull Fork Upstream</div>
             </div>
           </div>
           <div class="row modal-body-bottom">
             <div class="col-md-12">
-              <p><strong>Creating a Fork:</strong> This must done on GitHub.</p>
-              <p>Locate the project repository you would like to contribute to, click the Fork button in the upper right side of the screen.
-              This creates your Forked Repository, now all that is left to do is to clone that repository and you're good to go.</p>
+              <p><strong>Creating a Fork:</strong> This must done on the GitHub website.</p>
+              <p>Locate the project repository you would like to contribute to, click the <a href="#" class="trigger-img-modal" id="create-fork">Fork</a> button
+              in the upper right side of the screen.  This will create your Forked Repository, now all that is left to do is go to your new Forked Repository,
+              get the Repository URL, and clone it.</p>
 
-              <p class="modal-img-p">
-                <img class="modal-img" src="../Assets/Images/createFork.png" alt="Git Create Fork Image">
-              </p>
+              <p><strong>Configure Fork Upstream:</strong> This will sync your upstream with the original Project Repository.</p>
+              <p>If you do not perform this step, you will not be able to pull the most current project code from GitHub, or be able to submit a Pull Request
+              to the project owner.</p>
 
-              <p><strong>Check Fork Upstream:</strong> By Default you will have to set this up.</p>
-              <p>After you set up your Fork Upstream, you can run this again to ensure it is set up correctly.</p>
-
-              <p><strong>Configure Fork Upstream:</strong> This will sync your upstream with the original project repository.</p>
-              <p>If you do not perform this step, you will not be able to pull the most current project code from GitHub, or be able to submit a Pull Request to the project owner.</p>
+              <p><strong>Check Fork Upstream:</strong> Not necessary, but good practice to run.</p>
+              <p>After you set up your Fork Upstream, run this command to verify your changes were saved correctly.</p>
 
               <p><strong>Pull Fork Upstream:</strong> Make sure to switch to your master branch before using this command.</p>
-              <p>This will update your master branch with the most up to date code from the project Fork</p>
+              <p>This will update your master branch with the most up to date code from the Project Repository</p>
             </div>
           </div>
         </div>
@@ -557,30 +561,29 @@
           </div>
           <div class="row modal-body-bottom">
             <div class="col-md-12">
-              <p><strong>Create Pull Request:</strong> Request your code be reviewed / merged with Project Master.</p>
-              <p>This is done on the GitHub website, after you follow the steps to push your changes up to YOUR Forked repository.  To push to your Forked
-              Repository, simply follow the steps outlined in previous modals for pushing code.</p>
-              <p>Next, go to the Original Project Repository, and click on the Pull Requests tab.  On the next page, you will find a New Pull Requests button
-              colored in green, click that to begin making your Pull Request.  The next page will have the title "Comparing Changes", this is where you will
-              do exactly that, compare the Master to your Branch being submitted.  There are two drop down menus just below the page title, one is prefixed with
-              'base', and the other with 'compare'.  The 'base' should always be the project Master, and under 'compare' should be the branch you are requesting
-              to merge.  After selecting these two drop downs, you can view the files that have been changed in the project on your branch in comparison to the
-              Master.  Click Create Pull Request, the next page allows you to enter a Pull Request Title and a description for what changes you made.  After that,
-              simply click Create Pull Request again and you are done.</p>
+              <p><strong>Create Pull Request:</strong> This is done on the GitHub website.</p>
+              <p>Use the same steps to stage, commit, and push your changes up to YOUR Forked Repository as you do with any other Repository.  Next it is time to
+              Request your code to be reviewed and merged with Project Master.</p>
+              <p>Go to the Original Project Repository, and click on the <a href="#" class="trigger-img-modal" id="github-pull-request">Pull Request</a> button.  This can
+              also be done by clicking on the Pull Request tab, on the next page you will find a green <a href="#" class="trigger-img-modal" id="github-new-pull-request">New Pull Request</a>
+              button.  The next page will have the title "Comparing Changes", this is where you will do exactly that, compare the Master to your Branch being submitted.
+              There are two drop down menus just below the page title, one is prefixed with 'base', and the other with 'compare'.  The 'base' should always be the project Master,
+              and under 'compare' should be the branch you are requesting to merge.  After selecting these two drop downs, you can view the files that have been changed in the
+              project on your branch in comparison to the Project Master.  You can also add a title and description to your Pull Request, click
+              <a href="#" class="trigger-img-modal" id="github-open-pull-request">Create Pull Request</a> and you are done.</p>
               <p>After the Pull Request is submitted, people may make comments on a few changes they would like to see.  In this case you can make the changes to
-              the branch you submitted and just re-push it up to your Forked Repository, the Pull Request will automatically reflect those changes made.</p>
-
-              <p class="modal-img-p">
-                <img class="modal-img" src="../Assets/Images/pullRequest.jpg" alt="Make Pull Request Image">
-              </p>
+              the branch you submitted and just re-push it up to your Forked Repository, the Pull Request will automatically reflect those changes made.  You can view Pull Requests
+              made on the Project by going to the Original Project Repository and clicking the <a href="#" class="trigger-img-modal" id="github-view-pull-request-menu">Pull Request</a>
+              tab.  You can select and view both open and closed Pull Requests that yourself and others have submitted.</p>
 
               <p><strong>Merging Pull Request:</strong> This can only be done by the Project Owner, or those authorized to do so.</p>
               <p>This also is done on the GitHub website, once the code has been reviewed and approved, there is a merge button at the bottom of the Pull Request
               that will automatically merge the Pull Request into the Master.  Note:  If there are conflicts, these will need to be resolved prior to merging.</p>
 
               <p><strong>Merge Conflicts:</strong> You can check for merge conflicts on your Pull Request.</p>
-              <p>At the bottom of the Pull Request will be a small section in which GitHub displays whether or not the code has conflicts, if it doesn't, GitHub will
-              report that the code can be automatically merged.  Otherwise, it will state that there are conflicts and cannot be automatically merged.</p>
+              <p>At the bottom of the Pull Request will be a small section in which GitHub will report that eitehr there are
+              <a href="#" class="trigger-img-modal" id="github-view-pull-request">no conflicts</a> and therefore can be merged automatically, or that there
+              are conflicts and cannot be merged automatically.</p>
               <p>These conflicts can be resolved in almost the same manner as they are done with Branches, make sure your Master branch is up to date and then follow the
               branch merge instructions to merge the Master into your branch.  Notice:  You are merging the Master TO YOUR Branch, NOT YOUR BRANCH TO YOUR MASTER.  This
               means that your HEAD must be on your branch when you merge the two together.</p>
@@ -671,22 +674,22 @@
           </div>
           <div class="row modal-body-bottom">
             <div class="col-md-12">
-              <p><strong>Amend Commit:</strong> See command in terminal window</p>
+              <p><strong>Amend Commit:</strong> See command in terminal window.</p>
               <p>Say you do your commit command, but then realize you want to add another file to this commit.  This command allows you to do that.  Simply
               add the file to the staging area and then run this command.</p>
               <p>Perhaps you messed up your commit message, and would really like to change it.  If you run this command before pushing up your code, you can
               re-enter your commit message.</p>
 
-              <p><strong>Un-Stage a File:</strong> See command in terminal window</p>
+              <p><strong>Un-Stage a File:</strong> See command in terminal window.</p>
               <p>This allows you to remove a file from the Staging Area.  Say you accidently added all changed files to your Staging Area, but then realized
               that there is a file in that list you do not want to save the changes for.  Using this command will allow you to remove that file from your
               Staging Area and will therefore not be commited.</p>
 
-              <p><strong>Revert Modified File:</strong> See command in terminal window</p>
+              <p><strong>Revert Modified File:</strong> See command in terminal window.</p>
               <p>Use git status to see unstaged files.  If there is a file there that you do not want to save the changes for, using this command will revert
               the file back to its state in the last commit.</p>
 
-              <p><strong>Reset Branch:</strong> This alters commit history</p>
+              <p><strong>Reset Branch:</strong> This alters commit history.</p>
               <p>This tool is used to move the HEAD to a different commit X.  In otherwords, removing or deleting commits and reseting or
               rewinding a branch to a previous commit.  Note, HEAD-x refers to where X = commit to rewind to.  If no specific commit is specified to
               rewind to, it will undo changes on current commit.</p>
@@ -696,17 +699,17 @@
               branch to.  A hard reset, resets the branch on the working directory-level.  This means that all three components of the repository are reset
               back to the specified commit.</p>
 
-              <p><strong>Revert Branch:</strong> This does not alter commit history</p>
+              <p><strong>Revert Branch:</strong> This does not alter commit history.</p>
               <p>This tool is used very similarly to Reset.  The main and most important difference is that this tool will no rewrite your commit history or
               delete commits.  Revert will rewind to the specified commit, and then create a new commit on the end of the branch with that commits snapshot.
               Note that you should have a clean working directory prior to using this tool.</p>
 
-              <p><strong>Checkout Commit:</strong> Much like switching between Branches, but with Commits</p>
+              <p><strong>Checkout Commit:</strong> Much like switching between Branches, but with Commits.</p>
               <p>This is a great tool to look back at old version of code, all this does is move your HEAD to a certain commit state.  Be careful though, as if
               you start making changes and commits from here you could end up losing your work.  If you want to get code from a previous commit to work on, you
               should consider using Revert, Reset, or creating a whole new branch from that commit instead.</p>
 
-              <p><strong>Reset & Checkout on File Level:</strong> These can be applied to individual files also</p>
+              <p><strong>Reset & Checkout on File Level:</strong> These can be applied to individual files also.</p>
               <p>If you add the name of a file at the end of the command, then you will be able to perform a similar action as on commits.  Rather than rewinding/viewing
               a whole commit, you can rewind/view an individual file instead.</p>
               <p>Reset on File Level:  The soft, mixed, and hard parameters have no effect when working on the file level.  When you use Reset on a file, it will take
@@ -742,22 +745,18 @@
           </div>
           <div class="row modal-body-bottom">
             <div class="col-md-12">
-              <p><strong>Viewing Logs:</strong> Many options for this command can be found in the Reference Book</p>
+              <p><strong>Viewing Logs:</strong> Many options for this command can be found in the Reference Book.</p>
               <p>It can be very beneficial to see what has happened throughout a projects history.  By default, with no arguments, this command will list all commits in
               reverse chronological order in the repository.  There are too many options to provide here, but consider adding the -(n) argument, where (n) is the number
               of commits you would like to see.  This will list most recent (n) commits rather than all of them.  Press Q to exit.</p>
 
-              <p><strong>Git Rebase VS Git Merge:</strong> Both are used to integrate changes of two branches together, but differently</p>
+              <p><strong>Git <a href="#" class="trigger-img-modal" id="git-merge">Merge</a> VS Git <a href="#" class="trigger-img-modal" id="git-rebase">Rebase</a>:</strong>
+              Both are used to integrate changes of two branches together, but differently.</p>
               <p>Git Merge will take the version of code on your Master branch, and merge it to the end of your feature branch.  This avoids the posibility of re-writing
               public commits, but can provide a messy project history by saving all commits.</p>
-              <p>Git Rebase will take your Master branch, and merge your feature branch onto the end of it.  This keeps a nice linear project history, but if done
-              improperly can result in re-writing public commits.
-              </p>
 
-              <p class="modal-img-p">
-                <img class="modal-img" src="../Assets/Images/gitMerge.png" alt="Git Merge Image">
-                <img class="modal-img" src="../Assets/Images/gitRebase.png" alt="Git Rebase Image">
-              </p>
+              <p>Git Rebase will take your Master branch, and merge your feature branch onto the end of it.  This keeps a nice linear project history, but if done
+              improperly can result in re-writing public commits.</p>
 
               <p><strong>Note:</strong></p>
               <p>This is a general overview --Merging VS Rebasing can be complicated, and should be looked into further before using with important projects.</p>
