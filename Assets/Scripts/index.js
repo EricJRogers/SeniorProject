@@ -190,14 +190,6 @@ function loadImgModal() {
   img.alt = anchor_id;
   var modal = $('#modal-display-image');
   modal.modal();
-
-  // Get the <span> element that closes the modal
-  var span = document.getElementsById("modal-display-image-close")[0];
-
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function() {
-    modal.style.display = "none";
-  }
 }
 
 //Functions listening once document is loaded
@@ -207,7 +199,7 @@ function init() {
   //Modal-btn clicked will generate/display proper instructions
   $('.modal-btn').click(generateInstruction);
   //Will clear terminal window when modal becomes hidden
-  $('.modal').on('hidden.bs.modal', clearTerminal);
+  $('.modal-main').on('hidden.bs.modal', clearTerminal);
   //Anchor clicked will Load Image Modal
   $('.trigger-img-modal').click(loadImgModal);
 }
