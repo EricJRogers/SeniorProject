@@ -12,6 +12,7 @@ function loadModal() {
 function generateInstruction() {
   if(typeTimer != null) {
     clearTimeout(typeTimer);
+    typeTimer = null;
     $('.terminal-window').append('\nuser@terminal:~$ ');
   }
 
@@ -199,7 +200,7 @@ function init() {
   //Modal-btn clicked will generate/display proper instructions
   $('.modal-btn').click(generateInstruction);
   //Will clear terminal window when modal becomes hidden
-  $('.modal-main').on('hidden.bs.modal', clearTerminal);
+  $('.modal').on('hidden.bs.modal', clearTerminal);
   //Anchor clicked will Load Image Modal
   $('.trigger-img-modal').click(loadImgModal);
 }
